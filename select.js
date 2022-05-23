@@ -21,7 +21,6 @@ const indexScript = (() => {
     let idNum = 1;
     let haveSkill = [];
     let wantSkill = [];
-    let resultSkill = [];
     let resultData = document.getElementById("result");
 
     ////最初のページ

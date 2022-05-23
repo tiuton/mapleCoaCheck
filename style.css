@@ -22,8 +22,6 @@ body {
   background: rgba(249, 200, 155, 0.8);
 }
 
-
-
 h1,
 h2,
 h3,
@@ -41,6 +39,7 @@ div {
 
 a {
   text-decoration: none;
+  font-size: 3rem;
 }
 
 a:visited {
@@ -51,10 +50,9 @@ button {
   display: inline-block;
   font-size: 2rem;
   font-family: bokutachi;
-  width: 25%;
+  width: 15%;
   padding: 5px;
   background: rgba(250, 155, 204, 1);
-  border-color: rgba(250, 155, 204, 1);
   border-radius: 10px;
   margin: 10px;
 }
@@ -107,6 +105,7 @@ footer {
 
 .skillbox {
   display: flex;
+  width: 47%;
 }
 
 .skillbox div {
@@ -218,10 +217,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.skillbox {
-  width: 47%;
-}
-
 .skillsetbox select {
   width: 30%;
   display: inline-block;
@@ -258,4 +253,266 @@ footer {
   text-align: left;
 }
 
-@media screen and (max-width:414px) {}
+/* スマホ用 幅320pxで表示崩れがないようにすること*/
+@media screen and (max-width:599px) {
+  html {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: bokutachi;
+    font-size: 1.6rem;
+    line-height: 2.1;
+    color: #797e81;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: rgba(249, 200, 155, 0.8);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #797e81;
+  }
+
+  button {
+    display: inline-block;
+    font-family: bokutachi;
+    background: rgba(250, 155, 204, 1);
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 19%;
+    height: 35px;
+    padding: 0px;
+    margin: 3px;
+  }
+
+  button:hover {
+    background: rgba(250, 155, 204, 0.7);
+    cursor: pointer;
+  }
+
+  .contents {
+    margin-top: 20px;
+  }
+
+  .logo img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    transform: scale(1.5);
+  }
+
+  header {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    border: 2px solid white;
+    background: white;
+    justify-content: flex-start;
+  }
+
+  footer {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .contents-blk {
+    background: rgb(250, 172, 100);
+    border-radius: 20px;
+  }
+
+  .jobselect p {
+    width: 20%;
+    display: inline-block;
+  }
+
+  .jobselect select {
+    width: 73%;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: bokutachi;
+  }
+
+  .skillbox {
+    display: flex;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .skillbox div {
+    width: 100%;
+    text-align: left;
+  }
+
+  #skill {
+    display: none;
+  }
+
+  #coa {
+    width: 25%;
+    height: 25%;
+  }
+
+
+  #first {
+    display: none;
+  }
+
+  #first_page {
+    display: block;
+  }
+
+  #second_page {
+    display: none;
+  }
+
+  #second_back_btn {
+    display: none;
+  }
+
+  #second_next_btn {
+    display: none;
+  }
+
+  #third_back_btn {
+    display: none;
+  }
+
+  #third_next_btn {
+    display: none;
+  }
+
+  #third_page {
+    display: none;
+  }
+
+  #result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #result .result_box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background: rgb(250, 172, 100);
+    border-radius: 20px;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #result .result_box p {
+    height: 20px;
+  }
+
+  #result .result_box .koa_box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 5px;
+    background: rgb(204, 250, 155);
+  }
+
+  #result .result_box .koa_box :first-child {
+    display: none;
+  }
+
+  #result .result_box .koa_box p {
+    padding: 3px;
+    margin: 3px 0;
+    background: white;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+
+  .skillsetbox {
+    display: flex;
+    flex-direction: column;
+    background: rgba(204, 164, 126, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 3px;
+    text-align: left;
+  }
+
+  .skillsetbox p {
+    width: 100%;
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  .skillselect {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skillsetbox select {
+    width: 95%;
+    display: inline-block;
+    font-size: 0.5rem;
+    font-family: bokutachi;
+    margin: 3px 0px;
+  }
+
+  .skillsetbox span {
+    font-size: 1.5rem;
+    margin: 0 0 0 5px;
+  }
+
+  #jobname {
+    margin: 0;
+  }
+
+  #plus_btn {
+    height: 30px;
+    width: 30px;
+    margin: 10px 10px 0 10px;
+  }
+
+  #plus_btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .contents-row {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+}
