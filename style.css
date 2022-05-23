@@ -9,10 +9,6 @@ html {
   margin: 0 auto;
   padding: 0;
   font-size: 62.5%;
-
-  /*
-  border: 1px solid red;
-*/
 }
 
 body {
@@ -51,8 +47,6 @@ a:visited {
   color: #797e81;
 }
 
-
-
 button {
   display: inline-block;
   font-size: 2rem;
@@ -70,10 +64,27 @@ button:hover {
   cursor: pointer;
 }
 
-
-
 label {
   cursor: pointer;
+}
+
+input {
+  transform: scale(1.5);
+}
+
+header {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 2px solid white;
+  background: white;
+  justify-content: flex-start;
+}
+
+footer {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .contents-blk {
@@ -104,33 +115,12 @@ label {
 }
 
 #skill {
-  /*   本番用 */
   display: none;
-
-}
-
-input {
-  transform: scale(1.5);
-}
-
-footer {
-  font-family: 'Courier New', Courier, monospace;
 }
 
 #coa {
   width: 10%;
   height: 10%;
-}
-
-header {
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  border: 2px solid white;
-  background: white;
-  justify-content: flex-start;
 }
 
 .logo img {
@@ -152,7 +142,6 @@ header {
 }
 
 #second_page {
-  /*   本番用 */
   display: none;
 }
 
@@ -173,8 +162,6 @@ header {
 }
 
 #third_page {
-  /*   本番用 
-  */
   display: none;
 }
 
