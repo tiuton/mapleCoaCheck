@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: bokutachi;
+  src: url("./bokutachi.otf") format("opentype");
+}
+
+html {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 62.5%;
+
+  /*
+  border: 1px solid red;
+*/
+}
+
+body {
+  font-family: bokutachi;
+  font-size: 1.6rem;
+  line-height: 2.1;
+  color: #797e81;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: rgba(249, 200, 155, 0.8);
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #797e81;
+}
+
+
+
+button {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: bokutachi;
+  width: 25%;
+  padding: 5px;
+  background: rgba(250, 155, 204, 1);
+  border-color: rgba(250, 155, 204, 1);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+button:hover {
+  background: rgba(250, 155, 204, 0.7);
+  cursor: pointer;
+}
+
+
+
+label {
+  cursor: pointer;
+}
+
+.contents-blk {
+  background: rgb(250, 172, 100);
+  border-radius: 20px;
+}
+
+.jobselect p {
+  width: 20%;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.jobselect select {
+  width: 30%;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: bokutachi;
+}
+
+.skillbox {
+  display: flex;
+}
+
+.skillbox div {
+  width: 100%;
+  text-align: left;
+}
+
+#skill {
+  /*   本番用 */
+  display: none;
+
+}
+
+input {
+  transform: scale(1.5);
+}
+
+footer {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#coa {
+  width: 10%;
+  height: 10%;
+}
+
+header {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 2px solid white;
+  background: white;
+  justify-content: flex-start;
+}
+
+.logo img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.contents {
+  margin-top: 100px;
+}
+
+#first {
+  display: none;
+}
+
+#first_page {
+  display: block;
+}
+
+#second_page {
+  /*   本番用 */
+  display: none;
+}
+
+#second_back_btn {
+  display: none;
+}
+
+#second_next_btn {
+  display: none;
+}
+
+#third_back_btn {
+  display: none;
+}
+
+#third_next_btn {
+  display: none;
+}
+
+#third_page {
+  /*   本番用 
+  */
+  display: none;
+}
+
+#result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#result .result_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 45%;
+  background: rgb(250, 172, 100);
+  border-radius: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+#result .result_box .koa_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+#result .result_box .koa_box p {
+  padding: 3px 8px;
+  margin: 0 5px;
+  background: white;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.skillsetbox {
+  display: flex;
+  background: rgba(204, 164, 126, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 5px;
+}
+
+.skillsetbox p {
+  width: 20%;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.skillselect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skillbox {
+  width: 47%;
+}
+
+.skillsetbox select {
+  width: 30%;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: bokutachi;
+  margin: 0px 6px;
+}
+
+.skillsetbox span {
+  font-size: 2rem;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+#jobname {
+  margin: 0;
+}
+
+#plus_btn {
+  height: 50px;
+  width: 50px;
+  margin: 10px 10px 0 10px;
+}
+
+#plus_btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contents-row {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+@media screen and (max-width:414px) {}

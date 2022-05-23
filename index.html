@@ -1,0 +1,76 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
+    <meta name="description" content="メイプルストーリーの理想のスキルの組み合わせを見つけます。" />
+    <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./icomoon/style.css">
+    <title>りんごちゃんの計算機</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <span class="logo"><img src="./images/logo.svg" alt="logo"></span>
+      <h1><a href="http://createskill3.html.xdomain.jp/">りんごちゃんの計算機</a></h1>
+      <button id="reset_btn">リセット</button>
+      <button id="next_btn">進む</button>
+      <button id="second_back_btn">戻る</button>
+      <button id="second_next_btn">進む</button>
+      <button id="third_back_btn">戻る</button>
+      <button id="third_next_btn">最初へ</button>
+    </header>
+    <div class="contents">
+      <div id="first_page">
+        <div class="contents-blk">
+          <div class="jobselect">
+            <p>職業</p>
+            <select name="job" id="job">
+              <option value="未選択" selected>未選択</option>
+            </select>
+          </div>
+        </div>
+        <div class="contents-blk">
+          <div id="first">
+            <p>ほしいスキルを選ぶ</p>
+          </div>
+          <div class="skillselect" id="skill">
+          </div>
+        </div>
+      </div>
+
+
+      <div id="second_page">
+        <div class="contents-blk">
+          <div class="contents-row">
+            <div id="coa"><img src="images/coa.svg" alt="coa"></div>
+            <div>
+              <div id="jobname">
+                <!-- ここに職業名表示 -->
+              </div>
+              <p>持っているスキルの組み合わせをプルダウンで選択してください</p>
+            </div>
+          </div>
+          <div id="skillset">
+            <!-- ここにスキル名のセット表示 -->
+          </div>
+          <div id="plus_btn"><img src="./images/plusbtn.svg" alt="plus_btn"></div>
+        </div>
+      </div>
+
+      <div id="third_page">
+        <div id="result">
+          <!-- ここ結果表示 -->
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="copyright">© yukiichigo 2022.</p>
+    </footer>
+    <script src="./select.js"></script>
+  </body>
+
+  </html>
