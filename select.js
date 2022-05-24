@@ -127,23 +127,24 @@ const indexScript = (() => {
             thirdNextBtn.style.display = "none";
             jobname.innerText = "職業名：" + select.value;
             loadSkill(0);
+            SetSelectboxEvent();
         } else {
             alert("スキルの選択は9個までにしてください。");
         }
     }
     function loadSkill(spanCount) {
         if (spanCount != 0) {
-            preadd = `<div class="skillsetbox"><span>${spanCount + 1}</span>`;
+            preadd = `<div class="skillsetbox skill-group${spanCount + 1}"><span>${spanCount + 1}</span>`;
             skillsetboxIdCount += 3;
             addSkills(skillsetboxIdCount);
         } else {
-            preadd = `<div class="skillsetbox"><span>1</span>`;
+            preadd = `<div class="skillsetbox skill-group1"><span>1</span>`;
             skillsetboxIdCount = 0;
             addSkills(0);
         }
         function addSkills(num) {
             for (let j = 0; j < 3; j++) {
-                let midstart = `<select name="skillset${j + 1}" id="${j + 1 + num}"><option value="未選択" selected>(${j + 1})未選択</option>`;
+                let midstart = `<select name="skillset${j + 1}" id="${j + 1 + num}"><option value="未選択">(${j + 1})未選択</option>`;
                 preadd += midstart;
                 for (let i = 0; i < csvArray.length; i++) {
                     let skillboxID = document.getElementById(`skill${i + 1}`);
@@ -185,7 +186,38 @@ const indexScript = (() => {
         let classId = document.getElementsByClassName("skillsetbox");
         if (classId.length < 10) {
             loadSkill(classId.length);
+            SetSelectboxEvent();
         }
+    }
+    function SetSelectboxEvent(){
+        let classId = document.getElementsByClassName("skillsetbox");
+
+        var selectGroup = document.getElementsByClassName('skill-group'+(classId.length))[0].querySelectorAll('select');
+
+        Array.prototype.forEach.call(selectGroup, function(element) {
+            element.addEventListener('change', function(){
+                var selectValue = this.value;
+                if(selectValue != "未選択"){
+                    Array.prototype.forEach.call(selectGroup, function(element) {
+                        element.querySelector('[value='+selectValue+']').setAttribute('disabled',true);
+                    })
+                };
+            }, false);
+            element.addEventListener('blur', function(){
+                var selectValue = this.value;
+                if(selectValue != "未選択"){
+                    Array.prototype.forEach.call(selectGroup, function(element) {
+                        element.querySelector('[value='+selectValue+']').setAttribute('disabled',true);
+                    })
+                };
+            }, false);
+            element.addEventListener('focus', function(){
+                var selectValue = this.value;
+                Array.prototype.forEach.call(selectGroup, function(element) {
+                    element.querySelector('[value='+selectValue+']').removeAttribute('disabled');
+                })
+            }, false);
+        })
     }
     function compareSelect() {
         firstPageView.style.display = "none";
