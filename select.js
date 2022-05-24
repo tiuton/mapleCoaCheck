@@ -67,11 +67,13 @@ const indexScript = (() => {
 
                         for (let i = 0; i < csvArray.length; i++) {
                             if (select.value == csvArray[i][0]) {
+                                let replaceLine = csvArray[i][1].replace("\n", "");
+                                replaceLine = replaceLine.replace("\r", "");
                                 let addSkill = `
                                 <div class="skillbox">
                                 <div>
                                   <input type="checkbox" name="skill" id="skill${i + 1}">
-                                  <label for="skill${i + 1}" id="label${i + 1}">${csvArray[i][1]}</label>
+                                  <label for="skill${i + 1}" id="label${i + 1}">${replaceLine}</label>
                                 </div>
                               </div>
                                 `;
@@ -89,7 +91,6 @@ const indexScript = (() => {
     function convert_array(csv_data) {
         let data_array = [];
         let data_string = csv_data.split('\n');
-        data_string = data_string.replace("\r", "");
 
         for (let i = 0; i < data_string.length; i++) {
             data_array[i] = data_string[i].split(',');
