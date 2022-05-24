@@ -88,7 +88,9 @@ const indexScript = (() => {
     // テキストデータを配列に変換
     function convert_array(csv_data) {
         let data_array = [];
-        const data_string = csv_data.split('\n');
+        let data_string = csv_data.split('\n');
+        data_string = data_string.replace("\r", "");
+
         for (let i = 0; i < data_string.length; i++) {
             data_array[i] = data_string[i].split(',');
         }
@@ -189,32 +191,32 @@ const indexScript = (() => {
             SetSelectboxEvent();
         }
     }
-    function SetSelectboxEvent(){
+    function SetSelectboxEvent() {
         let classId = document.getElementsByClassName("skillsetbox");
 
-        var selectGroup = document.getElementsByClassName('skill-group'+(classId.length))[0].querySelectorAll('select');
+        var selectGroup = document.getElementsByClassName('skill-group' + (classId.length))[0].querySelectorAll('select');
 
-        Array.prototype.forEach.call(selectGroup, function(element) {
-            element.addEventListener('change', function(){
+        Array.prototype.forEach.call(selectGroup, function (element) {
+            element.addEventListener('change', function () {
                 var selectValue = this.value;
-                if(selectValue != "未選択"){
-                    Array.prototype.forEach.call(selectGroup, function(element) {
-                        element.querySelector('[value='+selectValue+']').setAttribute('disabled',true);
+                if (selectValue != "未選択") {
+                    Array.prototype.forEach.call(selectGroup, function (element) {
+                        element.querySelector('[value=' + selectValue + ']').setAttribute('disabled', true);
                     })
                 };
             }, false);
-            element.addEventListener('blur', function(){
+            element.addEventListener('blur', function () {
                 var selectValue = this.value;
-                if(selectValue != "未選択"){
-                    Array.prototype.forEach.call(selectGroup, function(element) {
-                        element.querySelector('[value='+selectValue+']').setAttribute('disabled',true);
+                if (selectValue != "未選択") {
+                    Array.prototype.forEach.call(selectGroup, function (element) {
+                        element.querySelector('[value=' + selectValue + ']').setAttribute('disabled', true);
                     })
                 };
             }, false);
-            element.addEventListener('focus', function(){
+            element.addEventListener('focus', function () {
                 var selectValue = this.value;
-                Array.prototype.forEach.call(selectGroup, function(element) {
-                    element.querySelector('[value='+selectValue+']').removeAttribute('disabled');
+                Array.prototype.forEach.call(selectGroup, function (element) {
+                    element.querySelector('[value=' + selectValue + ']').removeAttribute('disabled');
                 })
             }, false);
         })
