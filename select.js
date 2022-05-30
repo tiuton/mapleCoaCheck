@@ -58,9 +58,6 @@ const indexScript = (() => {
                         removeFunc();
                     } else {
                         skill.style.display = "flex";
-                        skill.style.flexDirection = "row";
-                        skill.style.margin = "0 50px";
-                        skill.style.flexWrap = "wrap";
                         skill.innerHTML = "";
                         let choiceJobP = document.getElementById("first");
                         choiceJobP.style.display = "block";

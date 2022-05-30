@@ -131,6 +131,11 @@ h6 {
   padding: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -236,7 +241,6 @@ footer {
 }
 
 .contents-blk {
-  /*   background: rgba(155, 204, 250, 0.8); */
   border: 0.5px solid rgba(121, 126, 129, 0.5);
   padding: 10px 0;
   display: flex;
@@ -308,6 +312,9 @@ footer {
 
 #skill {
   display: none;
+  flex-direction: row;
+  margin: 0 50px;
+  flex-wrap: wrap;
 }
 
 #coa {
@@ -519,5 +526,166 @@ li a:hover {
   height: 80%;
 }
 
+@media screen and (max-width:899px) {
+  a {
+    font-size: 3rem;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
+
+  li a {
+    font-size: 1rem;
+    margin: 5px 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+  }
+
+  .logo img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  button {
+    font-size: 1rem;
+    width: 80px;
+    height: 40px;
+    margin: 5px 2px;
+  }
+}
+
+
 /* スマホ用 幅320pxで表示崩れがないようにすること*/
-@media screen and (max-width:599px) {}
+@media screen and (max-width:599px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  header {
+    height: 80px;
+    flex-wrap: wrap;
+  }
+
+  a {
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
+
+
+
+  li a {
+    font-size: 1rem;
+    margin: 5px 5px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+  }
+
+  .logo img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  .patch {
+    position: relative;
+    top: 0;
+    left: 10px;
+    width: 300px;
+    height: 350px;
+  }
+
+  .patch p {
+    height: 80px;
+  }
+
+  .contact-developer {
+    font-size: 1.2rem;
+  }
+
+  .contact-developer:visited {
+    font-size: 1.2rem;
+  }
+
+  #coa {
+    width: 40px;
+    height: 40px;
+    margin: 3px 0 0 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    width: 50px;
+    height: 30px;
+    margin: 5px 2px;
+  }
+
+  .contents-blk p {
+    font-size: 2rem;
+    margin: 0 10px 0;
+    text-align: left;
+  }
+
+  .select-box {
+    width: 250px
+  }
+
+  #skill {
+    flex-direction: column;
+    margin: 0 10px;
+  }
+
+  .skillbox div {
+    width: 1000px;
+    text-align: left;
+  }
+
+  .rem2 {
+    margin: 0 0 0 10px;
+  }
+
+  #plus_btn {
+    height: 40px;
+    width: 40px;
+    margin: 30px 0 0 100px;
+  }
+
+  .skillsetbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 10px;
+    border-bottom: 0.5px solid rgba(121, 126, 129, 0.5);
+  }
+
+  .skillsetbox select {
+    width: 400px;
+  }
+
+  #result .result_box {
+    flex-direction: column;
+    padding-left: 0px;
+    margin: 0 0 0 10px;
+    width: 350px;
+  }
+
+  .coa_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #result .result_box .koa_box p {
+    padding: 3px 8px;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    border-radius: 5px;
+    width: 300px;
+  }
+}
