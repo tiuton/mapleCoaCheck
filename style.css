@@ -264,7 +264,8 @@ footer {
 }
 
 .select-box select {
-  width: 100%;
+  width: 500px;
+  font-family: bokutachi;
   padding-right: 1em;
   cursor: pointer;
   text-indent: 0.01px;
@@ -277,7 +278,7 @@ footer {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 5px;
-  background: #ebe1e1;
+  background: white;
   padding: 8px 38px 8px 8px;
 }
 
@@ -534,7 +535,6 @@ li a:hover {
   a {
     font-size: 3rem;
     display: inline-block;
-    /*     width: 100%; */
     text-align: left;
   }
 
@@ -558,6 +558,11 @@ li a:hover {
     height: 40px;
     margin: 5px 2px;
   }
+
+  .select-box select {
+    width: 400px;
+  }
+
 }
 
 
