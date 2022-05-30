@@ -193,6 +193,10 @@ main {
   z-index: 10;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .contact-developer {
   font-size: 1.6rem;
   color: blue;
@@ -530,7 +534,7 @@ li a:hover {
   a {
     font-size: 3rem;
     display: inline-block;
-    width: 100%;
+    /*     width: 100%; */
     text-align: left;
   }
 
@@ -571,7 +575,7 @@ li a:hover {
   a {
     font-size: 1.2rem;
     display: inline-block;
-    width: 100%;
+    /*     width: 100%; */
     text-align: left;
   }
 
