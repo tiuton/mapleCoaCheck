@@ -59,25 +59,43 @@ const indexScript = (() => {
                     } else {
                         skill.style.display = "flex";
                         skill.style.flexDirection = "row";
-                        skill.style.marginLeft = "20px";
+                        skill.style.margin = "0 50px";
                         skill.style.flexWrap = "wrap";
                         skill.innerHTML = "";
                         let choiceJobP = document.getElementById("first");
                         choiceJobP.style.display = "block";
 
+                        let animationIndex = 0;
+
                         for (let i = 0; i < csvArray.length; i++) {
                             if (select.value == csvArray[i][0]) {
-                                let replaceLine = csvArray[i][1].replace("\n", "");
-                                replaceLine = replaceLine.replace("\r", "");
-                                let addSkill = `
-                                <div class="skillbox">
-                                <div>
-                                  <input type="checkbox" name="skill" id="skill${i + 1}">
-                                  <label for="skill${i + 1}" id="label${i + 1}">${replaceLine}</label>
-                                </div>
-                              </div>
-                                `;
-                                skill.innerHTML = skill.innerHTML + addSkill;
+                                animationIndex += 1;
+                                if (animationIndex < 9) {
+                                    let replaceLine = csvArray[i][1].replace("\n", "");
+                                    replaceLine = replaceLine.replace("\r", "");
+                                    let addSkill = `
+                                    <div class="skillbox box fadeUp delay-time0${animationIndex}">
+                                    <div>
+                                      <input type="checkbox" name="skill" id="skill${i + 1}">
+                                      <label for="skill${i + 1}" id="label${i + 1}">${replaceLine}</label>
+                                    </div>
+                                  </div>
+                                    `;
+                                    skill.innerHTML = skill.innerHTML + addSkill;
+                                } else {
+                                    let replaceLine = csvArray[i][1].replace("\n", "");
+                                    replaceLine = replaceLine.replace("\r", "");
+                                    let addSkill = `
+                                    <div class="skillbox box fadeUp delay-time${animationIndex}">
+                                    <div>
+                                      <input type="checkbox" name="skill" id="skill${i + 1}">
+                                      <label for="skill${i + 1}" id="label${i + 1}">${replaceLine}</label>
+                                    </div>
+                                  </div>
+                                    `;
+                                    skill.innerHTML = skill.innerHTML + addSkill;
+                                }
+
                             }
                         }
                     }
@@ -128,7 +146,8 @@ const indexScript = (() => {
             thirdPageView.style.display = "none";
             thirdBackBtn.style.display = "none";
             thirdNextBtn.style.display = "none";
-            jobname.innerText = "職業名：" + select.value;
+            jobname.innerHTML = '<img src="./images/mell.gif" alt="メル"></img>';
+            jobname.innerHTML += '職業名：' + select.value;
             loadSkill(0);
             SetSelectboxEvent();
         } else {
@@ -286,10 +305,12 @@ const indexScript = (() => {
 
         let finalData = ``;
 
+        let count2 = 0;
+
         for (let i = 0; i < wantData.length; i++) {
-            let addStartData = `<div class="result_box"><p>組み合わせ${i + 1}</p>`;
+            let addStartData = `<div class="result_box fadeUp delay-time${i}"><p>組み合わせ${i + 1}</p>`;
             for (let j = 0; j < wantData[i].length; j++) {
-                let middleStartData = `<div class="koa_box" id="data${j}"><p>${j + 1}. </p>`;
+                let middleStartData = `<div class="koa_box" id="data${count2}${j}"><p>${j + 1}. </p>`;
                 for (let k = 0; k < wantData[i][j].length; k++) {
                     middleStartData += `<p>${wantData[i][j][k]}</p>`;
                 }
@@ -297,6 +318,7 @@ const indexScript = (() => {
             }
             addStartData += `</div>`;
             finalData += addStartData;
+            count2 += 1;
         }
         resultData.innerHTML = finalData;
 

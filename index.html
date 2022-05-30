@@ -1,77 +1,65 @@
-  <!DOCTYPE html>
-  <html lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
-    <meta name="description" content="メイプルストーリーの理想のスキルの組み合わせを見つけます。" />
+    <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="./icomoon/style.css">
-    <title>りんごちゃんの計算機</title>
-  </head>
+    <title>雪いちご</title>
+</head>
 
-  <body>
-    <header id="header">
-      <span class="logo"><img src="./images/logo.svg" alt="logo"></span>
-      <a href="http://createskill3.html.xdomain.jp/">りんごちゃんの計算機</a>
-      <button id="reset_btn">リセット</button>
-      <button id="next_btn">進む</button>
-      <button id="second_back_btn">戻る</button>
-      <button id="second_next_btn">進む</button>
-      <button id="third_back_btn">戻る</button>
-      <button id="third_next_btn">最初へ</button>
+<body>
+    <header>
+        <a href="./index.html"><span class="logo"><img src="./images/logo.svg" alt="logo"></span>雪いちご</a>
+        <nav>
+            <ul>
+                <li><a href="./index.html">top</a></li>
+                <li><a href="./tool.html">tool</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="contents">
-
-      <div id="first_page">
-        <div class="contents-blk">
-          <div class="jobselect">
-            <p>職業</p>
-            <select name="job" id="job">
-              <option value="未選択" selected>未選択</option>
-            </select>
-          </div>
-        </div>
-        <div class="contents-blk">
-          <div id="first">
-            <p>ほしいスキルを選ぶ</p>
-          </div>
-          <div class="skillselect" id="skill">
-          </div>
-        </div>
-      </div>
-
-
-      <div id="second_page">
-        <div class="contents-blk">
-          <div class="contents-row">
-            <div id="coa"><img src="images/coa.svg" alt="coa"></div>
-            <div>
-              <div id="jobname">
-                <!-- ここに職業名表示 -->
-              </div>
-              <p>持っているスキルの組み合わせを選択</p>
+    <main>
+        <section>
+            <div class="boxCenter textLeft narrow-p">
+                <p>メイプルストーリーの楓鯖にて活動しているギルド「雪いちご」が運営するサイトです。</p>
+                <p>ゲームをプレイしていてこれがあったら便利だなーを実現しようとする技術系ギルドです。</p>
+                <p>あったら便利と思われるツールを開発して公開しています。</p>
+                <p>ツールの開発案や開発プロジェクトの参加も募集中です。</p>
+                <p>初心者でもとても親切な<a href="https://twitter.com/maiple9" class="contact-developer"
+                        target="_blank">まっこり</a>が指導してくれます。</p>
+                <p>ついでに、ギルド員も募集しています。</p>
             </div>
-          </div>
-          <div id="skillset">
-            <!-- ここにスキル名のセット表示 -->
-          </div>
-          <div id="plus_btn"><img src="./images/plusbtn.svg" alt="plus_btn"></div>
-        </div>
-      </div>
-
-      <div id="third_page">
-        <div id="result">
-          <!-- ここ結果表示 -->
-        </div>
-      </div>
-    </div>
+        </section>
+        <section>
+            <div class="boxCenter textLeft narrow-p flex">
+                <p><img src="./images/mell.gif" alt="mell">ツールについての連絡先：
+                    <a href="https://twitter.com/tiutonNL" class="contact-developer" target="_blank">ちうとん</a>
+                    または
+                    <a href="https://twitter.com/maiple9" class="contact-developer" target="_blank">まっこり</a>
+                    まで</p>
+            </div>
+            <div class="boxCenter textLeft narrow-p flex">
+                <p><img src="./images/mell.gif" alt="mell">その他はゲーム内でギルド員に相談ください</p>
+            </div>
+        </section>
+        <section>
+            <div class="patch">
+                <img src="./images/patch.jpg" alt="patch">
+                <p>更新履歴<br>
+                    ------------<br>
+                    2022/05/30 topページ実装<br>
+                    2022/05/23 開発にまっこり追加<br>
+                    2022/05/15 りんごちゃんの計算機実装<br>
+                    2022/05/07 ちうとんが作成開始</p>
+            </div>
+        </section>
+    </main>
     <footer>
-      <p class="copyright">© yukiichigo 2022.</p>
+        <p class="copyright">© yukiichigo 2022.</p>
     </footer>
-    <script src="./select.js"></script>
-  </body>
+</body>
 
-  </html>
+</html>
