@@ -187,7 +187,14 @@ const indexScript = (() => {
     //Plusボタンを押したときの処理
     plusBtn.addEventListener('click', addColumn, false);
     //進むボタンを押したときの処理
-    secondNextBtn.addEventListener('click', compareSelect, false);
+    $(secondNextBtn).on("click",function(){
+        $.LoadingOverlay("show", {
+            imageColor: "#e6e6fa"
+        });
+        setTimeout(() => {
+            compareSelect();
+        }, 1000);
+    });
     ////2ページ関数
     function secondBack() {
         addSelect.innerHTML = "";
@@ -219,7 +226,8 @@ const indexScript = (() => {
                 var selectValue = this.value;
                 if (selectValue != "未選択") {
                     Array.prototype.forEach.call(selectGroup, function (element) {
-                        element.querySelector('[value=' + selectValue + ']').setAttribute('disabled', true);
+                        console.log(selectValue);
+                        element.querySelector('[value="' + selectValue + '"]').setAttribute('disabled', true);
                     })
                 };
             }, false);
@@ -227,14 +235,16 @@ const indexScript = (() => {
                 var selectValue = this.value;
                 if (selectValue != "未選択") {
                     Array.prototype.forEach.call(selectGroup, function (element) {
-                        element.querySelector('[value=' + selectValue + ']').setAttribute('disabled', true);
+                        console.log(selectValue);
+                        element.querySelector('[value="' + selectValue + '"]').setAttribute('disabled', true);
                     })
                 };
             }, false);
             element.addEventListener('focus', function () {
                 var selectValue = this.value;
                 Array.prototype.forEach.call(selectGroup, function (element) {
-                    element.querySelector('[value=' + selectValue + ']').removeAttribute('disabled');
+                        console.log(selectValue);
+                    element.querySelector('[value="' + selectValue + '"]').removeAttribute('disabled');
                 })
             }, false);
         })
@@ -352,6 +362,8 @@ const indexScript = (() => {
                 break;
             }
         }
+
+        $.LoadingOverlay("hide");
 
         //関数
         function createResultView() {
