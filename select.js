@@ -208,6 +208,7 @@ const indexScript = (() => {
             SetSelectboxEvent();
         }
     }
+    //2ページ目のselectを選んだ時、重複できないようにする処理
     function SetSelectboxEvent() {
         let classId = document.getElementsByClassName("skillsetbox");
 
@@ -238,6 +239,7 @@ const indexScript = (() => {
             }, false);
         })
     }
+    //2ページ目進むボタン押したとき
     function compareSelect() {
         firstPageView.style.display = "none";
         next_Btn.style.display = "none";
@@ -249,13 +251,10 @@ const indexScript = (() => {
         thirdBackBtn.style.display = "block";
         thirdNextBtn.style.display = "block";
 
-
-
         resultSkill = [];
         wantSkill = [];
         haveSkill = [];
 
-        calStop();
         addChoiceSkill();
         wantSkill = createWantSkill();
         let skillset1 = combinationSkill();
@@ -303,50 +302,74 @@ const indexScript = (() => {
         let finalData = ``;
 
         let count2 = 0;
+        createResultView();
 
-        for (let i = 0; i < wantData.length; i++) {
-            let addStartData = `<div class="result_box fadeUp delay-time${i}"><p>組み合わせ${i + 1}</p>`;
-            for (let j = 0; j < wantData[i].length; j++) {
-                let middleStartData = `<div class="koa_box" id="data${count2}${j}"><p>${j + 1}. </p>`;
-                for (let k = 0; k < wantData[i][j].length; k++) {
-                    middleStartData += `<p>${wantData[i][j][k]}</p>`;
-                }
-                addStartData = addStartData + middleStartData + `</div>`
-            }
-            addStartData += `</div>`;
-            finalData += addStartData;
-            count2 += 1;
-        }
         resultData.innerHTML = finalData;
 
-        ////持っているものの表示ができない
-        /*  let num1 = 1;
-         while (true) {
-             let checkedID = document.getElementById(`${num1}`);
-             if (checkedID == undefined || num1 == 5) {
-                 console.log(num1);
-                 break;
-             }
-             let count1 = 0;
-             for (let i = 0; i < wantSkill.length; i++) {
-                 console.log(checkedID.value == wantSkill[i]);
- 
-                 if (String.prototype.normalize(checkedID.value) == String.prototype.normalize(wantSkill[i])) {
-                     console.log("少し");
-                     count1 += 1
- 
-                 }
-                 if (count1 == 3) {
-                     console.log("成功");
-                     let testo = document.getElementById(`data${i}`);
-                     testo.style.backgroundColor = "red";
-                 }
-             }
-             num1 += 1;
-         } */
+        let selectId = document.getElementById("1");
+        let count3 = 1;
+        //selectを取得
+        while (selectId != undefined) {
 
+            count2 = 0;
+            let selectId1 = document.getElementById(`${count3}`);
+            let selectId2 = document.getElementById(`${count3 + 1}`);
+            let selectId3 = document.getElementById(`${count3 + 2}`);
 
+            for (let i = 0; i < wantData.length; i++) {
+                for (let j = 0; j < wantData[i].length; j++) {
+                    if (wantData[i][j][0] == selectId1.value) {
+                        console.log("ここ" + wantData[i][j][1]);
+                        if ((((wantData[i][j][1] == selectId2.value) && (wantData[i][j][2] == selectId3.value))) ||
+                            (((wantData[i][j][1] == "自由枠") && (wantData[i][j][2] == selectId3.value))) ||
+                            (((wantData[i][j][1] == selectId2.value) && (wantData[i][j][2] == "自由枠")))) {
+                            let data1 = document.getElementById(`data${count2}${j}${0}`);
+                            let data2 = document.getElementById(`data${count2}${j}${1}`);
+                            let data3 = document.getElementById(`data${count2}${j}${2}`);
+                            data1.style.backgroundColor = "gray";
+                            data2.style.backgroundColor = "gray";
+                            data3.style.backgroundColor = "gray";
 
+                        } else if ((((wantData[i][j][2] == selectId2.value) && (wantData[i][j][1] == selectId3.value))) ||
+                            (((wantData[i][j][2] == "自由枠") && (wantData[i][j][1] == selectId3.value))) ||
+                            (((wantData[i][j][2] == selectId2.value) && (wantData[i][j][1] == "自由枠")))) {
+                            let data1 = document.getElementById(`data${count2}${j}${0}`);
+                            let data2 = document.getElementById(`data${count2}${j}${1}`);
+                            let data3 = document.getElementById(`data${count2}${j}${2}`);
+                            data1.style.backgroundColor = "gray";
+                            data2.style.backgroundColor = "gray";
+                            data3.style.backgroundColor = "gray";
+                        } else { }
+                    }
+                }
+                count2 += 1;
+            }
+
+            count3 += 3;
+            selectId = document.getElementById(`${count3}`);
+            if (count3 == 99) {
+                console.log("selectIDオーバーフローしました");
+                break;
+            }
+        }
+
+        //関数
+        function createResultView() {
+            for (let i = 0; i < wantData.length; i++) {
+                let addStartData = `<div class="result_box fadeUp delay-time${i}"><p>組み合わせ${i + 1}</p>`;
+                for (let j = 0; j < wantData[i].length; j++) {
+                    let middleStartData = `<div class="koa_box" id="data${count2}${j}"><p>${j + 1}. </p>`;
+                    for (let k = 0; k < wantData[i][j].length; k++) {
+                        middleStartData += `<p id="data${count2}${j}${k}">${wantData[i][j][k]}</p>`;
+                    }
+                    addStartData = addStartData + middleStartData + `</div>`
+                }
+                addStartData += `</div>`;
+                finalData += addStartData;
+                count2 += 1;
+            }
+            finalData = "<p>既に持っている組み合わせはグレー色</p>" + finalData;
+        }
         function getIsDuplicate(arr1, arr2) {
             return [...arr1, ...arr2].filter(item => arr1.includes(item) && arr2.includes(item)).length > 0
         }
@@ -488,41 +511,6 @@ const indexScript = (() => {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
             }
         }
-        /*         resultSkill = removeDuplicateList(wantSkill, haveSkill); */
-        /*         let sortSkill = [];
-                let sortJunretu1 = [];
-                for (let i = 0; i < resultSkill.length; i++) {
-                    for (let j = 0; j < resultSkill[i].length; j++) {
-                        sortJunretu1.push(junretsu(resultSkill[i][j], 3));//第2引数はコア枠の数
-                    }
-                    sortSkill.push(sortJunretu1);
-                }
-        
-                console.log(sortSkill);
-            } */
-
-        /*     function junretsu(balls, nukitorisu) {
-                var arrs, i, j, zensu, results, parts;
-                arrs = [];
-                zensu = balls.length;
-                if (zensu < nukitorisu) {
-                    return;
-                } else if (nukitorisu == 1) {
-                    for (i = 0; i < zensu; i++) {
-                        arrs[i] = [balls[i]];
-                    }
-                } else {
-                    for (i = 0; i < zensu; i++) {
-                        parts = balls.slice(0);
-                        parts.splice(i, 1)[0];
-                        results = junretsu(parts, nukitorisu - 1);
-                        for (j = 0; j < results.length; j++) {
-                            arrs.push([balls[i]].concat(results[j]));
-                        }
-                    }
-                }
-                return arrs;
-            } */
 
         function createWantSkill() {
             let result1 = [];
@@ -564,105 +552,8 @@ const indexScript = (() => {
                 }
             }
         }
-        //第一引数[]、第二引数[[]]
-        function removeDuplicateList(skillList, removeList) {
-            let pattern = getPattern(skillList);
-            let memorizeIndex = [];
-            removePattern(removeList, pattern);
-            for (let i = 0; i < memorizeIndex.length; i++) {
-                pattern[memorizeIndex[i][0]].splice(memorizeIndex[i][1], 1);
-            }
-            return pattern
-            //第一引数に選択されたスキルの配列を渡すと全通りのパターンを返す
-            function getPattern(selectSkills) {
-                let skillNum = 0;
-                let coaFrame = 0;
-                const combination = (nums, k) => {
-                    let ans = [];
-                    if (nums.length < k) {
-                        return []
-                    }
-                    if (k === 1) {
-                        for (let i = 0; i < nums.length; i++) {
-                            ans[i] = [nums[i]];
-                        }
-                    } else {
-                        for (let i = 0; i < nums.length - k + 1; i++) {
-                            let row = combination(nums.slice(i + 1), k - 1);
-                            for (let j = 0; j < row.length; j++) {
-                                ans.push([nums[i]].concat(row[j]));
-                            }
-                        }
-                    }
-                    return ans;
-                }
-
-                skillNum = selectSkills.length;
-                coaFrame = getFrame(skillNum);
-
-                let headFixed = 0;
-                let conbinationArray = [];
-                //選択されたスキルの全ての組み合わせを抽出
-                for (let i = 0; i < skillNum; i++) {
-                    conbinationArray.push([[selectSkills[i]]]);
-                    let compareList = [];
-
-                    for (let j = 0; j < skillNum; j++) {
-                        if (i !== j) {
-                            compareList.push(selectSkills[j]);
-                        }
-                    }
-                    let addCombination = combination(compareList, 2);
-                    for (let k = 0; k < addCombination.length; k++) {
-                        if (k === 0) {
-                            conbinationArray[i][k].push(addCombination[k][0]);
-                            conbinationArray[i][k].push(addCombination[k][1]);
-                        } else {
-                            let list = [selectSkills[i]];
-                            list.push(addCombination[k][0]);
-                            list.push(addCombination[k][1]);
-                            conbinationArray[i].push(list);
-                        }
-                    }
-                }
-
-                return conbinationArray;
-            }
-            //第一引数に持っているコアの配列を渡す、第二引数にスキルの全通りのパターンを渡すと持っているコアのパターンを除いた配列が返ってくる
-            function removePattern(removeSkills, skillPattern) {
-                for (let i = 0; i < skillPattern.length; i++) {//0-4
-                    for (let j = 0; j < skillPattern[i].length; j++) {//0-4
-                        for (let l = 0; l < removeSkills.length; l++) {
-                            if (removeSkills[l][0] === skillPattern[i][j][0]) {
-                                if ((skillPattern[i][j].includes(removeSkills[l][0])) && (skillPattern[i][j].includes(removeSkills[l][1])) && (skillPattern[i][j].includes(removeSkills[l][2]))) {
-                                    memorizeIndex.push([i, j, l]);
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
     }
-    function calStop() {
-        resultData.innerHTML = `<p>計算中</p>`;
-    }
-    function getFrame(skillsuu) {
-        if (skillsuu >= 12) {
-            return 8
-        } else if (skillsuu >= 10) {
-            return 7
-        } else if (skillsuu >= 8) {
-            return 6
-        } else if (skillsuu >= 7) {
-            return 5
-        } else if (skillsuu >= 5) {
-            return 4
-        } else {
-            return 3
-        }
-    }
+
     ////3ページ
     //Plusボタンを押したときの処理
     thirdBackBtn.addEventListener('click', backSecondPage, false);
