@@ -1,93 +1,96 @@
-  <!DOCTYPE html>
-  <html lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
-    <meta name="description" content="メイプルストーリーの理想のスキルの組み合わせを見つけます。" />
-    <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
-    <link rel="stylesheet" href="style.css" />
-    <title>雪いちご</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
+  <meta name="description" content="メイプルストーリーの理想のスキルの組み合わせを見つけます。" />
+  <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/loadingoverlay.min.js"></script>
 
-  <body>
-    <header>
-      <a href="./index.html"><span class="logo"><img src="./images/logo.svg" alt="logo"></span>雪いちご</a>
-      <nav class="flex">
-        <div id="coa" class="fadeUp"><img src="images/coa.svg" alt="coa"></div>
-        <ul>
-          <li> <button id="reset_btn" class="fadeUp">リセット</button></li>
-          <li><button id="next_btn" class="fadeUp">進む</button></li>
-          <li> <button id="second_back_btn" class="fadeUp">戻る</button></li>
-          <li> <button id="second_next_btn" class="fadeUp">進む</button></li>
-          <li> <button id="third_back_btn" class="fadeUp">戻る</button></li>
-          <li> <button id="third_next_btn" class="fadeUp">最初へ</button></li>
-        </ul>
-        <ul>
-          <li><a href="./index.html">top</a></li>
-          <li><a href="./tool.html">tool</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="contents">
-        <h1>りんごちゃんの計算機</h1>
-        <p>コア枠がぎりぎり！ほしいスキルの3重複を狙いたい！</p>
-        <p>でも、どういう組み合わせにしたらよいかわからない！</p>
-        <p>出張先でもデイリーを欠かさないプロメイプラーりんごちゃんの悩みを解決するツールです。</p>
-        <div id="first_page">
-          <div class="contents-blk">
-            <p><img src="./images/mell.gif" alt="メル">職業</p>
-            <div class="select-box">
-              <select name="job" id="job">
-                <option value="未選択" selected="">未選択</option>
-              </select>
-            </div>
-          </div>
+  <title>雪いちご</title>
+</head>
 
-          <div id="first">
-            <div class="contents-blk">
-              <p class="width100 textLeft"> <img src="./images/mell.gif" alt="メル">重複を狙うスキルを選ぶ</p>
-              <div class="skillselect" id="skill">
-              </div>
-            </div>
+<body>
+  <header>
+    <a href="./index.html"><span class="logo"><img src="./images/logo.svg" alt="logo"></span>雪いちご</a>
+    <nav class="flex">
+      <div id="coa" class="fadeUp"><img src="images/coa.svg" alt="coa"></div>
+      <ul>
+        <li> <button id="reset_btn" class="fadeUp">リセット</button></li>
+        <li><button id="next_btn" class="fadeUp">進む</button></li>
+        <li> <button id="second_back_btn" class="fadeUp">戻る</button></li>
+        <li> <button id="second_next_btn" class="fadeUp">進む</button></li>
+        <li> <button id="third_back_btn" class="fadeUp">戻る</button></li>
+        <li> <button id="third_next_btn" class="fadeUp">最初へ</button></li>
+      </ul>
+      <ul>
+        <li><a href="./index.html">top</a></li>
+        <li><a href="./tool.html">tool</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="contents">
+      <h1>りんごちゃんの計算機</h1>
+      <p>コア枠がぎりぎり！ほしいスキルの3重複を狙いたい！</p>
+      <p>でも、どういう組み合わせにしたらよいかわからない！</p>
+      <p>出張先でもデイリーを欠かさないプロメイプラーりんごちゃんの悩みを解決するツールです。</p>
+      <div id="first_page">
+        <div class="contents-blk">
+          <p><img src="./images/mell.gif" alt="メル">職業</p>
+          <div class="select-box">
+            <select name="job" id="job">
+              <option value="未選択" selected="">未選択</option>
+            </select>
           </div>
         </div>
 
-        <div id="second_page">
+        <div id="first">
           <div class="contents-blk">
-            <div>
-              <div id="jobname" class="rem2 textLeft width100 ">
-                <!-- ここに職業名表示 -->
-              </div>
-              <p><img src="./images/mell.gif" alt="メル">持っているスキルの組み合わせを選択</p>
-            </div>
-          </div>
-          <div>
-            <div id="skillset" class="select-box fadeUp delay-time03">
-              <!-- ここにスキル名のセット表示 -->
-            </div>
-            <div id="plus_btn"><img src="./images/plusbtn.svg" alt="plus_btn"></div>
-          </div>
-        </div>
-
-        <div id="third_page">
-          <div class="contents-blk">
-            <div id="result">
-              <!-- ここ結果表示 -->
-
-              <!-- ここまで -->
+            <p class="width100 textLeft"> <img src="./images/mell.gif" alt="メル">重複を狙うスキルを選ぶ</p>
+            <div class="skillselect" id="skill">
             </div>
           </div>
         </div>
       </div>
 
-    </main>
-    <footer>
-      <p class="copyright">© yukiichigo 2022.</p>
-    </footer>
-    <script src="./select.js"></script>
-  </body>
+      <div id="second_page">
+        <div class="contents-blk">
+          <div>
+            <div id="jobname" class="rem2 textLeft width100 ">
+              <!-- ここに職業名表示 -->
+            </div>
+            <p><img src="./images/mell.gif" alt="メル">持っているスキルの組み合わせを選択</p>
+          </div>
+        </div>
+        <div>
+          <div id="skillset" class="select-box fadeUp delay-time03">
+            <!-- ここにスキル名のセット表示 -->
+          </div>
+          <div id="plus_btn"><img src="./images/plusbtn.svg" alt="plus_btn"></div>
+        </div>
+      </div>
 
-  </html>
+      <div id="third_page">
+        <div class="contents-blk">
+          <div id="result">
+            <!-- ここ結果表示 -->
+
+            <!-- ここまで -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    <p class="copyright">© yukiichigo 2022.</p>
+  </footer>
+  <script src="./select.js"></script>
+</body>
+
+</html>

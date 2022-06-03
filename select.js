@@ -187,7 +187,14 @@ const indexScript = (() => {
     //Plusボタンを押したときの処理
     plusBtn.addEventListener('click', addColumn, false);
     //進むボタンを押したときの処理
-    secondNextBtn.addEventListener('click', compareSelect, false);
+    $(secondNextBtn).on("click",function(){
+        $.LoadingOverlay("show", {
+            imageColor: "#e6e6fa"
+        });
+        setTimeout(() => {
+            compareSelect();
+        }, 1000);
+    });
     ////2ページ関数
     function secondBack() {
         addSelect.innerHTML = "";
@@ -355,6 +362,8 @@ const indexScript = (() => {
                 break;
             }
         }
+
+        $.LoadingOverlay("hide");
 
         //関数
         function createResultView() {
