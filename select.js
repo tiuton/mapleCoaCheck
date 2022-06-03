@@ -240,7 +240,57 @@ const indexScript = (() => {
         })
     }
     //2ページ目進むボタン押したとき
+
     function compareSelect() {
+
+        ////輸入品
+        /*  new Promise(function (resolve, reject) {
+ 
+             try {
+                 function init() {
+                     let elements = document.getElementsByTagName('button');
+                     for (let element of elements) {
+                         if (element.getAttribute('data-id')) {
+                             element.addEventListener('click', testLoad);
+                         }
+                     }
+                     stopAllLoad();
+                 }
+ 
+                 function testLoad() {
+                     let dataId = this.getAttribute('data-id');
+                     if (dataId) {
+                         startLoad(dataId);
+                         setTimeout(stopAllLoad, 6000);
+                     }
+                 }
+ 
+                 function startLoad(id) {
+                     document.getElementById(id).style.visibility = 'visible';
+                     element.style.display = "block";
+                 }
+ 
+                 function stopAllLoad() {
+                     let elements = document.getElementsByClassName('loading');
+                     for (let element of elements) {
+                         element.style.visibility = 'hidden';
+                         element.style.display = "none";
+                     }
+                 }
+ 
+                 window.addEventListener('load', init);
+                 resolve()
+             } catch (e) {
+                 // 異常終了時の処理
+ 
+                 // returnの代わりに異常終了したことを表すresolveを返す
+                 reject()
+             }
+ 
+         }) */
+
+
+
         firstPageView.style.display = "none";
         next_Btn.style.display = "none";
         reset_Btn.style.display = "none";
@@ -369,6 +419,7 @@ const indexScript = (() => {
                 count2 += 1;
             }
             finalData = "<p>既に持っている組み合わせはグレー色</p>" + finalData;
+
         }
         function getIsDuplicate(arr1, arr2) {
             return [...arr1, ...arr2].filter(item => arr1.includes(item) && arr2.includes(item)).length > 0
@@ -476,7 +527,6 @@ const indexScript = (() => {
                     }
 
                     return resultList;
-                    break;
                 }
                 numyo += 1;
                 console.log(numyo);
@@ -583,4 +633,5 @@ const indexScript = (() => {
         thirdBackBtn.style.display = "none";
         thirdNextBtn.style.display = "none";
     }
+
 })();

@@ -531,6 +531,63 @@ li a:hover {
   height: 80%;
 }
 
+/* .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  user-select: none;
+  display: none;
+}
+
+.load-text {
+  color: white;
+  font-size: 2rem;
+}
+
+.load-blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.load-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  border-top-color: rgba(255, 255, 255, 1);
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.load-absolute {
+  position: absolute;
+} */
+
 @media screen and (max-width:899px) {
   a {
     font-size: 3rem;

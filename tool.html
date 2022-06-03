@@ -7,6 +7,7 @@
     <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
     <meta name="description" content="メイプルストーリーの理想のスキルの組み合わせを見つけます。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
+    <!--     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
     <link rel="stylesheet" href="style.css" />
     <title>雪いちご</title>
   </head>
@@ -20,7 +21,7 @@
           <li> <button id="reset_btn" class="fadeUp">リセット</button></li>
           <li><button id="next_btn" class="fadeUp">進む</button></li>
           <li> <button id="second_back_btn" class="fadeUp">戻る</button></li>
-          <li> <button id="second_next_btn" class="fadeUp">進む</button></li>
+          <li> <button id="second_next_btn" data-id="load" class="fadeUp">進む</button></li>
           <li> <button id="third_back_btn" class="fadeUp">戻る</button></li>
           <li> <button id="third_next_btn" class="fadeUp">最初へ</button></li>
         </ul>
@@ -85,8 +86,12 @@
 
     </main>
     <footer>
-      <p class="copyright">© yukiichigo 2022.</p>
+      <p class="copyright">© 2022 yukiichigo inc. </p>
     </footer>
+    <!--     <div id="load" class="loading">
+      <div class="load-circle"></div>
+      <div class="load-text load-blink load-absolute">Loading...</div>
+    </div> -->
     <script src="./select.js"></script>
   </body>
 
