@@ -219,7 +219,8 @@ const indexScript = (() => {
                 var selectValue = this.value;
                 if (selectValue != "未選択") {
                     Array.prototype.forEach.call(selectGroup, function (element) {
-                        element.querySelector('[value=' + selectValue + ']').setAttribute('disabled', true);
+                        console.log(selectValue);
+                        element.querySelector('[value="' + selectValue + '"]').setAttribute('disabled', true);
                     })
                 };
             }, false);
@@ -227,14 +228,16 @@ const indexScript = (() => {
                 var selectValue = this.value;
                 if (selectValue != "未選択") {
                     Array.prototype.forEach.call(selectGroup, function (element) {
-                        element.querySelector('[value=' + selectValue + ']').setAttribute('disabled', true);
+                        console.log(selectValue);
+                        element.querySelector('[value="' + selectValue + '"]').setAttribute('disabled', true);
                     })
                 };
             }, false);
             element.addEventListener('focus', function () {
                 var selectValue = this.value;
                 Array.prototype.forEach.call(selectGroup, function (element) {
-                    element.querySelector('[value=' + selectValue + ']').removeAttribute('disabled');
+                        console.log(selectValue);
+                    element.querySelector('[value="' + selectValue + '"]').removeAttribute('disabled');
                 })
             }, false);
         })
