@@ -1,8 +1,8 @@
 <?php
 session_start();
-$name = $_POST["name"];
-$email = $_POST["email"];
-$message = $_POST["message"];
+$name = htmlspecialchars($_POST["name"], ENT_QUOTES);
+$email = htmlspecialchars($_POST["email"], ENT_QUOTES);
+$message = htmlspecialchars($_POST["message"], ENT_QUOTES);
 $messageView = nl2br($message);
 
 if (strlen(trim($name)) == 0) {

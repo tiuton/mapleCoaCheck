@@ -42,12 +42,12 @@ $user_result = mb_send_mail($user_to, $user_subject, $body, $user_header);
 //--------------------------------------
 // 管理者に送るメール
 //--------------------------------------
-/* $admin_to = "info@yukiichigo.com";
+$admin_to = "info@yukiichigo.com";
 $admin_subject = "お問い合わせがありました。";
-$admin_header = "From: $email"; */
+$admin_header = "From: $email";
 
 /* ここはメール送信なのでコメントアウトしています */
-/* $admin_result = mb_send_mail($admin_to, $admin_subject, $body, $admin_header); */
+$admin_result = mb_send_mail($admin_to, $admin_subject, $body, $admin_header);
 
 //--------------------------------------
 // メールが正常に送信されたか判定
