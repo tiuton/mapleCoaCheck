@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+input,
+button,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form {
+    margin: 0 auto;
+}
+
+input#your-name,
+input#phone-num,
+input#e-mail {
+    font-size: 1.8rem;
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+select#day,
+select#time {
+    margin: 0 0 0 2em;
+}
+
+td,
+th {
+    border: 1px solid rgba(75, 74, 74, 1);
+}
+
+textarea {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.8rem;
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input#btn-submit {
+    font-size: 1.3rem;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background: #ea7558;
+    border-radius: 5px;
+}
+
+.textRight {
+    text-align: center;
+}
