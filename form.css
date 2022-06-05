@@ -208,3 +208,8 @@ ol {
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
+
+.error-text{
+    color: red;
+    text-align: left;
+}
