@@ -18,28 +18,6 @@ $message = isset($_SESSION["message"]) ? $_SESSION["message"] : "";
     <link rel="stylesheet" href="form.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
     <title>雪いちご</title>
-    <script>
-        $("form").on("submit",function(event){
-            event.preventDefault();
-            var isValid = true;
-            if($("[name='name']").val() == ""){
-                isValid = false;
-                $("[name='name']").next().text("入力してください。")
-            }
-            if($("[name='email']").val() == ""){
-                isValid = false;
-                $("[name='email']").next().text("入力してください。")
-            }
-            if($("[name='message']").val() == ""){
-                isValid = false;
-                $("[name='message']").next().text("入力してください。")
-            }
-
-            if(isValid){
-                $(this).submit();
-            }
-        });
-    </script>
 
 </head>
 
