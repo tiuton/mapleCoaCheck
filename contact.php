@@ -38,6 +38,22 @@ session_destroy();
 
 <body>
   <main>
+    <div class="loopSlide loopSlide1">
+      <ul>
+        <li><img src="./images/character/sunausagiF.gif" alt=""></li>
+        <li><img src="./images/character/morinobannin.gif" alt=""></li>
+        <li><img src="./images/character/kurowapanda.gif" alt=""></li>
+        <li><img src="./images/character/tyakkuma.gif" alt=""></li>
+        <li><img src="./images/character/rupan.gif" alt=""></li>
+      </ul>
+      <ul>
+        <li><img src="./images/character/sunausagiM.gif" alt=""></li>
+        <li><img src="./images/character/yorunobannin.gif" alt=""></li>
+        <li><img src="./images/character/pinkkkuma.gif" alt=""></li>
+        <li><img src="./images/character/tenshika.gif" alt=""></li>
+        <li><img src="./images/character/hotarusuraimu.gif" alt=""></li>
+      </ul>
+    </div>
     <form id="contact" name="form1" method="post" action="check.php">
       <div class="container">
         <div class="head">
@@ -59,6 +75,22 @@ session_destroy();
         <button id="submit" type="submit" class="center">Send!</button>
       </div>
     </form>
+    <div class="loopSlide loopSlide2">
+      <ul>
+        <li><img src="./images/character/sunausagiF.gif" alt=""></li>
+        <li><img src="./images/character/morinobannin.gif" alt=""></li>
+        <li><img src="./images/character/kurowapanda.gif" alt=""></li>
+        <li><img src="./images/character/tyakkuma.gif" alt=""></li>
+        <li><img src="./images/character/rupan.gif" alt=""></li>
+      </ul>
+      <ul>
+        <li><img src="./images/character/sunausagiM.gif" alt=""></li>
+        <li><img src="./images/character/yorunobannin.gif" alt=""></li>
+        <li><img src="./images/character/pinkkkuma.gif" alt=""></li>
+        <li><img src="./images/character/tenshika.gif" alt=""></li>
+        <li><img src="./images/character/hotarusuraimu.gif" alt=""></li>
+      </ul>
+    </div>
   </main>
 </body>
 
