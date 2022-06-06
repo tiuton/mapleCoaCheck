@@ -205,7 +205,7 @@ const indexScript = (() => {
         });
         setTimeout(() => {
             compareSelect();
-        }, 5000);
+        }, 1000);
     });
     ////2ページ関数
     function secondBack() {
