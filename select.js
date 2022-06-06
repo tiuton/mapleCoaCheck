@@ -188,12 +188,24 @@ const indexScript = (() => {
     plusBtn.addEventListener('click', addColumn, false);
     //進むボタンを押したときの処理
     $(secondNextBtn).on("click",function(){
-        $.LoadingOverlay("show", {
-            imageColor: "#e6e6fa"
+        $(".loading-box").show();
+        $(".yue").LoadingOverlay("show", {
+            image : "./images/character/yue.gif",
+            imageAnimation : "",
+            size : 150,
+            minSize : 150,
+            maxSize : 50
+        });
+        $(".ran").LoadingOverlay("show", {
+            image : "./images/character/ran.gif",
+            imageAnimation : "",
+            size : 150,
+            minSize : 150,
+            maxSize : 50
         });
         setTimeout(() => {
             compareSelect();
-        }, 1000);
+        }, 5000);
     });
     ////2ページ関数
     function secondBack() {
@@ -413,7 +425,8 @@ const indexScript = (() => {
             }
         }
 
-        $.LoadingOverlay("hide");
+        $(".loading-box").LoadingOverlay("hide");
+        $(".loading-box").hide();
 
         //関数
         function createResultView() {

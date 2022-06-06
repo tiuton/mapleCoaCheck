@@ -530,6 +530,20 @@ li a:hover {
   width: 100%;
   height: 80%;
 }
+.loading-box{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+.yue{
+  top: 0;
+  right: 0;
+}
+.ran{
+  top: 0;
+  left: 0;
+}
 
 
 @media screen and (max-width:899px) {
