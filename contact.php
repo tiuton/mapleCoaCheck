@@ -67,7 +67,7 @@ session_destroy();
             <div class="error-text"></div>
           </dd>
           <dd>
-            <div class="left"><textarea type="text" name="message" placeholder="Message" value="<?php echo $message; ?>"></textarea>
+            <div><textarea type="text" name="message" placeholder="Message" value="<?php echo $message; ?>"></textarea>
               <div class="error-text"></div>
             </div>
           </dd>
