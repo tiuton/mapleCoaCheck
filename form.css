@@ -10,7 +10,11 @@ body {
 dd {
     margin: 20px 0;
     width: 450px;
-    text-align: right;
+    text-align: left;
+}
+
+dd input {
+    transform: scale(1);
 }
 
 .left {
@@ -50,10 +54,6 @@ textarea {
     height: 100px;
     margin-bottom: 10px;
     max-width: 440px;
-}
-
-input:first-of-type {
-    margin-top: 35px;
 }
 
 .loopSlide {
@@ -270,7 +270,7 @@ ol {
 }
 
 /* media queries */
-@media (max-width: 700px) {
+@media screen and (max-width:899px) {
     label.error {
         width: 90%;
     }
@@ -288,6 +288,7 @@ ol {
         padding-top: 10px;
     }
 }
+
 
 .message {
     font-family: 'Source Sans Pro', arial, sans-serif;
@@ -307,4 +308,31 @@ ol {
 .error-text {
     color: red;
     text-align: left;
+}
+
+@media screen and (max-width:599px) {
+    main#maxwidth {
+        max-width: 320px;
+    }
+
+    #contact {
+        max-width: 320px;
+    }
+
+    input {
+        max-width: 320px;
+    }
+
+    textarea {
+        max-width: 320px;
+    }
+
+    dd {
+        margin: 8px;
+        max-width: 320px;
+    }
+
+    dl {
+        margin: 0;
+    }
 }
