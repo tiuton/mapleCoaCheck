@@ -321,6 +321,7 @@ ol {
 
     input {
         max-width: 320px;
+        margin: 0 auto;
     }
 
     textarea {
@@ -328,8 +329,10 @@ ol {
     }
 
     dd {
-        margin: 8px;
+        margin: 8px auto;
         max-width: 320px;
+        box-sizing: border-box;
+        text-align: center;
     }
 
     dl {
