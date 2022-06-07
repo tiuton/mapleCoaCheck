@@ -37,8 +37,8 @@ session_destroy();
 </header>
 
 <body>
-  <main>
-    <div class="loopSlide loopSlide1">
+  <main id="maxwidth">
+    <div class=" loopSlide loopSlide1">
       <ul>
         <li><img src="./images/character/sunausagiF.gif" alt=""></li>
         <li><img src="./images/character/morinobannin.gif" alt=""></li>
