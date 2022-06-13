@@ -233,33 +233,25 @@ const indexScript = (() => {
 
         var selectGroup = document.getElementsByClassName('skill-group' + (classId.length))[0].querySelectorAll('select');
 
-        Array.prototype.forEach.call(selectGroup, function (element) {
-            element.addEventListener('change', function () {
+        $(selectGroup).each(function(){
+            $(this).on('change', function () {
                 var selectValue = this.value;
-                if (selectValue != "未選択") {
-                    Array.prototype.forEach.call(selectGroup, function (element) {
-                        console.log(selectValue);
-                        element.querySelector('[value="' + selectValue + '"]').setAttribute('disabled', true);
-                    })
-                };
-            }, false);
-            element.addEventListener('blur', function () {
-                var selectValue = this.value;
-                if (selectValue != "未選択") {
-                    Array.prototype.forEach.call(selectGroup, function (element) {
-                        console.log(selectValue);
-                        element.querySelector('[value="' + selectValue + '"]').setAttribute('disabled', true);
-                    })
-                };
-            }, false);
-            element.addEventListener('focus', function () {
-                var selectValue = this.value;
-                Array.prototype.forEach.call(selectGroup, function (element) {
-                    console.log(selectValue);
-                    element.querySelector('[value="' + selectValue + '"]').removeAttribute('disabled');
-                })
-            }, false);
-        })
+                var selectedValues = [];
+
+                $(selectGroup).find('option:selected').each(function(){
+                    if ($(this).val() != "未選択") {
+                        selectedValues.push($(this).val());
+                    };
+                });
+
+                $(selectGroup).find('option').each(function(){
+                    $(this).prop('disabled', false)
+                    if($.inArray($(this).val(), selectedValues) != -1){
+                        $(this).prop('disabled', true)
+                    }
+                });
+            });
+        });
     }
     //2ページ目進むボタン押したとき
 
