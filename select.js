@@ -143,7 +143,7 @@ const indexScript = (() => {
             thirdPageView.style.display = "none";
             thirdBackBtn.style.display = "none";
             thirdNextBtn.style.display = "none";
-            jobname.innerHTML = '<img src="./images/mell.gif" alt="メル"></img>';
+            jobname.innerHTML = '<img src="./images/character/satu.gif" alt="satu"></img>';
             jobname.innerHTML += '職業名：' + select.value;
             loadSkill(0);
             SetSelectboxEvent();
@@ -187,21 +187,21 @@ const indexScript = (() => {
     //Plusボタンを押したときの処理
     plusBtn.addEventListener('click', addColumn, false);
     //進むボタンを押したときの処理
-    $(secondNextBtn).on("click",function(){
+    $(secondNextBtn).on("click", function () {
         $(".loading-box").show();
         $(".yue").LoadingOverlay("show", {
-            image : "./images/character/yue.gif",
-            imageAnimation : "",
-            size : 150,
-            minSize : 150,
-            maxSize : 50
+            image: "./images/character/yue.gif",
+            imageAnimation: "",
+            size: 150,
+            minSize: 150,
+            maxSize: 50
         });
         $(".ran").LoadingOverlay("show", {
-            image : "./images/character/ran.gif",
-            imageAnimation : "",
-            size : 150,
-            minSize : 150,
-            maxSize : 50
+            image: "./images/character/ran.gif",
+            imageAnimation: "",
+            size: 150,
+            minSize: 150,
+            maxSize: 50
         });
         setTimeout(() => {
             compareSelect();
@@ -255,7 +255,7 @@ const indexScript = (() => {
             element.addEventListener('focus', function () {
                 var selectValue = this.value;
                 Array.prototype.forEach.call(selectGroup, function (element) {
-                        console.log(selectValue);
+                    console.log(selectValue);
                     element.querySelector('[value="' + selectValue + '"]').removeAttribute('disabled');
                 })
             }, false);
@@ -264,54 +264,6 @@ const indexScript = (() => {
     //2ページ目進むボタン押したとき
 
     function compareSelect() {
-
-        ////輸入品
-        /*  new Promise(function (resolve, reject) {
- 
-             try {
-                 function init() {
-                     let elements = document.getElementsByTagName('button');
-                     for (let element of elements) {
-                         if (element.getAttribute('data-id')) {
-                             element.addEventListener('click', testLoad);
-                         }
-                     }
-                     stopAllLoad();
-                 }
- 
-                 function testLoad() {
-                     let dataId = this.getAttribute('data-id');
-                     if (dataId) {
-                         startLoad(dataId);
-                         setTimeout(stopAllLoad, 6000);
-                     }
-                 }
- 
-                 function startLoad(id) {
-                     document.getElementById(id).style.visibility = 'visible';
-                     element.style.display = "block";
-                 }
- 
-                 function stopAllLoad() {
-                     let elements = document.getElementsByClassName('loading');
-                     for (let element of elements) {
-                         element.style.visibility = 'hidden';
-                         element.style.display = "none";
-                     }
-                 }
- 
-                 window.addEventListener('load', init);
-                 resolve()
-             } catch (e) {
-                 // 異常終了時の処理
- 
-                 // returnの代わりに異常終了したことを表すresolveを返す
-                 reject()
-             }
- 
-         }) */
-
-
 
         firstPageView.style.display = "none";
         next_Btn.style.display = "none";
@@ -657,6 +609,12 @@ const indexScript = (() => {
         thirdPageView.style.display = "none";
         thirdBackBtn.style.display = "none";
         thirdNextBtn.style.display = "none";
+
+        select.value = "未選択"
+        skill.style.display = "none";
+        let choiceJobP = document.getElementById("first");
+        choiceJobP.style.display = "none";
+        removeFunc();
     }
 
 })();
