@@ -82,6 +82,8 @@ session_destroy();
         <li><img src="./images/character/kurowapanda.gif" alt=""></li>
         <li><img src="./images/character/tyakkuma.gif" alt=""></li>
         <li><img src="./images/character/rupan.gif" alt=""></li>
+        <li><img src="./images/character/amuti.gif" alt=""></li>
+        <li><img src="./images/character/blockpass.gif" alt=""></li>
       </ul>
       <ul>
         <li><img src="./images/character/sunausagiM.gif" alt=""></li>
@@ -89,6 +91,8 @@ session_destroy();
         <li><img src="./images/character/pinkkkuma.gif" alt=""></li>
         <li><img src="./images/character/tenshika.gif" alt=""></li>
         <li><img src="./images/character/hotarusuraimu.gif" alt=""></li>
+        <li><img src="./images/character/hikyu.gif" alt=""></li>
+        <li><img src="./images/character/sukurat.gif" alt=""></li>
       </ul>
     </div>
   </main>
@@ -102,15 +106,15 @@ session_destroy();
     var isValid = true;
     if ($("[name='name']").val() == "") {
       isValid = false;
-      $("[name='name']").next().text("入力してください。")
+      $("[name='name']").next().text("名前を入力してください。")
     }
     if ($("[name='email']").val() == "") {
       isValid = false;
-      $("[name='email']").next().text("入力してください。")
+      $("[name='email']").next().text("メールアドレスを入力してください。")
     }
     if ($("[name='message']").val() == "") {
       isValid = false;
-      $("[name='message']").next().text("入力してください。")
+      $("[name='message']").next().text("問い合わせ内容を入力してください。")
     }
 
     if (!isValid) {

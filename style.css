@@ -105,8 +105,17 @@ body {
   padding: 0;
   text-align: center;
   position: relative;
-  background: url(./images/haikei.jpg) fixed center / cover;
-  z-index: 0;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./images/haikei.jpg) center / cover;
 }
 
 html::before {
@@ -157,7 +166,7 @@ button {
   font-size: 2rem;
   font-family: bokutachi;
   color: #797e81;
-  width: 150px;
+  width: 100%;
   height: 40px;
   padding: 5px;
   background: rgba(157, 250, 155, 1);
@@ -171,6 +180,14 @@ button:hover {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0em 0.2em 0.8em 0.05em rgba(0, 0, 0, 0.2);
+}
+
+.button-blk {
+  width: 100%;
+}
+
+.button-blk li {
+  width: 40%;
 }
 
 label {
@@ -211,6 +228,13 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: start;
+}
+
+.border-line {
+  /* border: 1px solid #797e81; */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px;
 }
 
 section {
@@ -447,7 +471,9 @@ footer {
 #plus_btn {
   height: 75px;
   width: 75px;
-  margin: 30px 0 0 100px;
+  position: relative;
+  top: 10px;
+  left: 15px;
 }
 
 #plus_btn:hover {
@@ -467,7 +493,7 @@ footer {
 ul {
   display: flex;
   list-style: none;
-
+  justify-content: space-around;
 }
 
 li a {
@@ -530,17 +556,20 @@ li a:hover {
   width: 100%;
   height: 80%;
 }
-.loading-box{
+
+.loading-box {
   width: 50%;
   height: 100%;
   position: absolute;
   display: none;
 }
-.yue{
+
+.yue {
   top: 0;
   right: 0;
 }
-.ran{
+
+.ran {
   top: 0;
   left: 0;
 }
@@ -569,8 +598,6 @@ li a:hover {
 
   button {
     font-size: 1rem;
-    width: 80px;
-    height: 40px;
     margin: 5px 2px;
   }
 
@@ -642,8 +669,6 @@ li a:hover {
 
   button {
     font-size: 1rem;
-    width: 50px;
-    height: 30px;
     margin: 5px 2px;
   }
 
@@ -674,7 +699,6 @@ li a:hover {
   #plus_btn {
     height: 40px;
     width: 40px;
-    margin: 30px 0 0 100px;
   }
 
   .skillsetbox {
