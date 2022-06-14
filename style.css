@@ -204,15 +204,15 @@ main {
   display: flex;
   position: relative;
   flex-direction: column;
-  margin: 80px 0;
+  margin: 80px auto;
   top: 0;
   left: 0;
   z-index: 10;
 }
 
-.no-wrap {
+/* .no-wrap {
   white-space: nowrap;
-}
+} */
 
 .contact-developer {
   font-size: 1.6rem;
@@ -231,14 +231,19 @@ main {
 }
 
 .border-line {
-  /* border: 1px solid #797e81; */
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
   padding: 5px;
 }
 
 section {
-  margin: 50px 0 20px 0;
+  /* margin: 50px 0 20px 0; */
+  margin: 0 auto 20px;
+  width: 80%;
+}
+
+section:first-child {
+  margin: 50px auto 20px;
 }
 
 .menubar {
@@ -254,7 +259,8 @@ header {
   flex-direction: row;
   width: 100%;
   background: white;
-  justify-content: space-between;
+  /* space-betweenのほうがいい？ */
+  justify-content: center;
   box-shadow: 0 6px 3px -3px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0px;
@@ -347,9 +353,8 @@ footer {
 }
 
 #coa {
-  width: 75px;
-  height: 75px;
-  margin: 5px 0;
+  width: 60px;
+  height: 60px;
 }
 
 .logo img {
@@ -722,10 +727,10 @@ li a:hover {
     width: 350px;
   }
 
-  .coa_box {
+  /* .coa_box {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
   #result .result_box .koa_box p {
     padding: 3px 8px;
