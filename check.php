@@ -37,6 +37,7 @@ $_SESSION["message"] = $message;
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="favicon.ico">
     <title>雪いちご</title>
 
 </head>

@@ -18,6 +18,7 @@ session_destroy();
   <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="form.css">
+  <link rel="icon" href="favicon.ico">
   <script src="./js/jquery-3.6.0.min.js"></script>
   <title>雪いちご</title>
 
