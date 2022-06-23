@@ -89,13 +89,11 @@ $_SESSION["message"] = $message;
                 </dl>
                 <div class="flex space1">
                     <p class="center"><a href="./contact.php">Back</a></p>
-                    <p>
-                        <?php
-                        if (!isset($error)) {
-                            echo '<p class="center"><a href="./send.php">Send!</a></p>';
-                        }
-                        ?>
-                    </p>
+                    <?php
+                    if (!isset($error)) {
+                        echo '<p class="center"><a href="./send.php">Send!</a></p>';
+                    }
+                    ?>
                 </div>
             </div>
         </form>
