@@ -1,12 +1,6 @@
 @charset "UTF-8";
 @import url(./style.css);
 
-body {
-    padding-top: 25px;
-    background-color: #454545;
-    font-family: charcuterie-contrast, bokutachi;
-}
-
 h1 {
     color: white;
 }
