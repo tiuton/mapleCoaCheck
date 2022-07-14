@@ -35,32 +35,59 @@ $_SESSION["message"] = $message;
     <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
     <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://use.typekit.net/upr2vdx.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/form.css">
     <link rel="icon" href="favicon.ico">
     <title>雪いちご</title>
-
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#nav-toggle').click(function() {
+                $('body').toggleClass('open');
+            });
+        });
+    </script>
 </head>
 
-<header>
-    <a href="./index.html"><span class="logo"><img src="./images/logo.svg" alt="logo"></span>雪いちご</a>
-    <nav>
-        <ul>
-            <li><a href="./index.html">top</a></li>
-            <li><a href="./tool.html">tool</a></li>
-            <li><a href="./contact.php">contact</a></li>
-            <!--                 <li><a href="./index.html">tips</a></li>
-                <li><a href="./index.html">policy</a></li> -->
-        </ul>
-    </nav>
-</header>
-
 <body>
+    <header id="page-header">
+        <a href="./index.html" class="a-deco margin-top10">
+            <div class="flex">
+                <p class="logo-text margin-left10">
+                    <span class="icon-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span>
+                </p>
+                <p class="logo-text">雪いちご</p>
+            </div>
+        </a>
+        <nav class="margin-top10">
+            <ul>
+                <li><a href="./index.html" class="header-menu">Top</a></li>
+                <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li><a href="./contact.php" class="header-menu">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="nav-toggle" class="sp">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="header-nav sp">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="./index.html" class="header-menu">Top</a></li>
+                <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li><a href="./contact.php" class="header-menu">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <form id="contact" name="form1" method="post" action="">
             <div class="container">
                 <div class="head">
-                    <h2>Check</h2>
+                    <h1>Check</h1>
                 </div>
                 <div>
                     <?php
@@ -75,16 +102,16 @@ $_SESSION["message"] = $message;
                 </div>
                 <dl>
                     <div class="flex space1">
-                        <p class="p1">name:</p>
-                        <p class="p2"><?php echo $name; ?></p>
+                        <p class="p1 rem2">name:</p>
+                        <p class="p2 rem2"><?php echo $name; ?></p>
                     </div>
                     <div class="flex space1">
-                        <p class="p1">e-mail:</p>
-                        <p class="p2"><?php echo $email; ?></p>
+                        <p class="p1 rem2">e-mail:</p>
+                        <p class="p2 rem2"><?php echo $email; ?></p>
                     </div>
                     <div class="flex space1">
-                        <p class="p1">message:</p>
-                        <p class="p2"><?php echo $messageView; ?></p>
+                        <p class="p1 rem2">message:</p>
+                        <p class="p2 rem2"><?php echo $messageView; ?></p>
                     </div>
                 </dl>
                 <div class="flex space1">

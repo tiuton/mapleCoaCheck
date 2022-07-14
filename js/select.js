@@ -138,12 +138,12 @@ const indexScript = (() => {
             next_Btn.style.display = "none";
             reset_Btn.style.display = "none";
             secondPageView.style.display = "block";
-            secondBackBtn.style.display = "block";
-            secondNextBtn.style.display = "block";
+            secondBackBtn.style.display = "inline-block";
+            secondNextBtn.style.display = "inline-block";
             thirdPageView.style.display = "none";
             thirdBackBtn.style.display = "none";
             thirdNextBtn.style.display = "none";
-            jobname.innerHTML = '<img src="./images/character/satu.gif" alt="satu"></img>';
+            // jobname.innerHTML = '<img src="./images/character/satu.gif" alt="satu"></img>';
             jobname.innerHTML += '職業名：' + select.value;
             loadSkill(0);
             SetSelectboxEvent();
@@ -163,7 +163,7 @@ const indexScript = (() => {
         }
         function addSkills(num) {
             for (let j = 0; j < 3; j++) {
-                let midstart = `<select name="skillset${j + 1}" id="${j + 1 + num}"><option value="未選択">(${j + 1})未選択</option>`;
+                let midstart = `<select name="skillset${j + 1}" id="${j + 1 + num}" class="select-box"><option value="未選択">(${j + 1})未選択</option>`;
                 preadd += midstart;
                 for (let i = 0; i < csvArray.length; i++) {
                     let skillboxID = document.getElementById(`skill${i + 1}`);
@@ -211,8 +211,8 @@ const indexScript = (() => {
     function secondBack() {
         addSelect.innerHTML = "";
         firstPageView.style.display = "block";
-        next_Btn.style.display = "block";
-        reset_Btn.style.display = "block";
+        next_Btn.style.display = "inline-block";
+        reset_Btn.style.display = "inline-block";
         secondPageView.style.display = "none";
         secondBackBtn.style.display = "none";
         secondNextBtn.style.display = "none";
@@ -233,20 +233,20 @@ const indexScript = (() => {
 
         var selectGroup = document.getElementsByClassName('skill-group' + (classId.length))[0].querySelectorAll('select');
 
-        $(selectGroup).each(function(){
+        $(selectGroup).each(function () {
             $(this).on('change', function () {
                 var selectValue = this.value;
                 var selectedValues = [];
 
-                $(selectGroup).find('option:selected').each(function(){
+                $(selectGroup).find('option:selected').each(function () {
                     if ($(this).val() != "未選択") {
                         selectedValues.push($(this).val());
                     };
                 });
 
-                $(selectGroup).find('option').each(function(){
+                $(selectGroup).find('option').each(function () {
                     $(this).prop('disabled', false)
-                    if($.inArray($(this).val(), selectedValues) != -1){
+                    if ($.inArray($(this).val(), selectedValues) != -1) {
                         $(this).prop('disabled', true)
                     }
                 });
@@ -264,8 +264,8 @@ const indexScript = (() => {
         secondBackBtn.style.display = "none";
         secondNextBtn.style.display = "none";
         thirdPageView.style.display = "block";
-        thirdBackBtn.style.display = "block";
-        thirdNextBtn.style.display = "block";
+        thirdBackBtn.style.display = "inline-block";
+        thirdNextBtn.style.display = "inline-block";
 
         resultSkill = [];
         wantSkill = [];
@@ -584,8 +584,8 @@ const indexScript = (() => {
         next_Btn.style.display = "none";
         reset_Btn.style.display = "none";
         secondPageView.style.display = "block";
-        secondBackBtn.style.display = "block";
-        secondNextBtn.style.display = "block";
+        secondBackBtn.style.display = "inline-block";
+        secondNextBtn.style.display = "inline-block";
         thirdPageView.style.display = "none";
         thirdBackBtn.style.display = "none";
         thirdNextBtn.style.display = "none";
@@ -593,8 +593,8 @@ const indexScript = (() => {
     function goTitle() {
         addSelect.innerHTML = "";
         firstPageView.style.display = "block";
-        next_Btn.style.display = "block";
-        reset_Btn.style.display = "block";
+        next_Btn.style.display = "inline-block";
+        reset_Btn.style.display = "inline-block";
         secondPageView.style.display = "none";
         secondBackBtn.style.display = "none";
         secondNextBtn.style.display = "none";
