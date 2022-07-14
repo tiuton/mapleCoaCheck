@@ -1,29 +1,23 @@
 @charset "UTF-8";
+@import url(./style.css);
 
 body {
     padding-top: 25px;
     background-color: #454545;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-family: charcuterie-contrast, bokutachi;
+}
+
+h1 {
+    color: white;
 }
 
 dd {
-    margin: 20px 0;
-    width: 450px;
-    text-align: left;
-}
-
-dd input {
-    transform: scale(1);
-}
-
-.left {
-    text-align: left;
-    font-size: 2rem;
+    margin: 20px auto;
+    width: 90%;
 }
 
 .container {
-    max-width: 600px;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     -webkit-border-radius: 6px;
@@ -38,6 +32,7 @@ dd input {
     border-radius: 6px 6px 0px 0px;
     background-color: #2ABCA7;
     color: #FAFAFA;
+    margin: 0 auto;
 }
 
 h2 {
@@ -53,7 +48,7 @@ input {
 textarea {
     height: 100px;
     margin-bottom: 10px;
-    max-width: 440px;
+    max-width: 100%;
 }
 
 .loopSlide {
@@ -61,7 +56,6 @@ textarea {
     display: flex;
     flex-flow: row nowrap;
     width: 100vw;
-    overflow: hidden;
 }
 
 .loopSlide ul {
@@ -157,7 +151,7 @@ textarea {
     padding: 15px 10px 10px;
     border: 1px solid #cecece;
     background: #d7d7d7;
-    color: #FAFAFA;
+    color: #575757;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -168,23 +162,22 @@ textarea {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 80%;
-    max-width: 540px;
 }
 
 ::-webkit-input-placeholder {
-    color: #FAFAFA;
+    color: #575757FA;
 }
 
 :-moz-placeholder {
-    color: #FAFAFA;
+    color: #575757;
 }
 
 ::-moz-placeholder {
-    color: #FAFAFA;
+    color: #575757;
 }
 
 :-ms-input-placeholder {
-    color: #FAFAFA;
+    color: #575757;
 }
 
 button {
@@ -198,10 +191,12 @@ button {
     border: 1px solid #2ABCA7;
     -webkit-transition: .5s;
     transition: .5s;
-    display: inline-block;
     cursor: pointer;
+    display: inline-block;
     width: 90%;
+    height: 3em;
     color: #fff;
+    font-size: 2.5rem;
 }
 
 button:hover,
@@ -227,11 +222,13 @@ label.error {
 .p1 {
     width: 100px;
     text-align: right;
+    font-family: bokutachi;
 }
 
 .p2 {
     width: 80%;
     text-align: left;
+    font-family: bokutachi;
 }
 
 .space1 {
@@ -239,11 +236,6 @@ label.error {
     border: 3px solid rgba(80, 80, 80, 0.5);
     border-radius: 10px;
     justify-content: space-evenly;
-}
-
-dl {
-    margin: 0 0 0 20px;
-
 }
 
 .center a {
@@ -263,6 +255,7 @@ dl {
     display: inline-block;
     cursor: pointer;
     width: 30%;
+    text-decoration: none;
 }
 
 ol {
@@ -311,31 +304,11 @@ ol {
 }
 
 @media screen and (max-width:599px) {
-    main#maxwidth {
-        max-width: 320px;
+    .container {
+        width: 100%;
     }
 
-    #contact {
-        max-width: 320px;
-    }
-
-    input {
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    textarea {
-        max-width: 320px;
-    }
-
-    dd {
-        margin: 8px auto;
-        max-width: 320px;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    dl {
-        margin: 0;
+    .header-nav h1 {
+        color: #54484B;
     }
 }

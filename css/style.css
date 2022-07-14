@@ -1,0 +1,689 @@
+@charset "UTF-8";
+@import url("./reset.css");
+@import url("./animation.css");
+@import url("./icon.css");
+
+@font-face {
+  font-family: bokutachi;
+  src: url("../font/bokutachi.otf") format("opentype");
+}
+
+/* 汎用 */
+.sp {
+  display: none;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.boxCenter {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.left {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.rem2 {
+  font-size: 2rem;
+}
+
+.block {
+  display: block;
+}
+
+.margin-top10 {
+  margin-top: 10px;
+}
+
+.margin-left10 {
+  margin-left: 10px;
+}
+
+.margin-bottom30 {
+  margin-bottom: 30px;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.border-line {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+}
+
+/* ヘッダー */
+header {
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
+  background: url(../images/header.jpg);
+  box-shadow: 0 6px 3px -3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.logo-text {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  color: #3A3A3A;
+  font-size: 4rem;
+
+}
+
+.a-deco {
+  text-decoration: none;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  height: 50px;
+}
+
+header li {
+  margin-right: 40px;
+}
+
+.header-menu {
+  font-size: 4rem;
+  text-align: center;
+  display: inline-block;
+  line-height: 50px;
+  letter-spacing: 0.1em;
+  font-family: charcuterie-contrast, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: normal;
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+.header-menu:hover {
+  animation-name: colorChangeAnime;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+li:nth-last-child(1) {
+  margin-right: 50px;
+}
+
+/* フッター */
+footer {
+  position: relative;
+  top: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* 本文 */
+
+h1 {
+  font-size: 4rem;
+  font-family: charcuterie-contrast, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  text-align: center;
+  color: #54484B;
+}
+
+
+body {
+  font-family: bokutachi;
+  font-size: 1.6rem;
+  line-height: 2.1;
+  color: #1c1f20;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url(../images/haikei.jpg) center / cover; */
+  background: url(../images/haikei.jpg);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 80px auto;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+label {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+section {
+  margin: 0 auto 20px;
+  width: 80%;
+}
+
+section:first-child {
+  margin: 50px auto 20px;
+}
+
+
+/* Toolのcss */
+button {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: bokutachi;
+  color: #1c1f20;
+  width: 80%;
+  height: 2em;
+  background: rgba(157, 250, 155, 1);
+  border: none;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+button:hover {
+  background: rgba(157, 250, 155, 1);
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0em 0.2em 0.8em 0.05em rgba(0, 0, 0, 0.2);
+}
+
+select {
+  font-family: bokutachi;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  background: white;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+#job {
+  height: 2em;
+}
+
+.select-box {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+#skill {
+  display: none;
+  flex-direction: row;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skillbox {
+  display: flex;
+  width: 51%;
+}
+
+.skillbox div {
+  width: 40em;
+  text-align: left;
+}
+
+.skillsetbox {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.5px solid rgba(121, 126, 129, 0.5);
+}
+
+.skillsetbox select {
+  font-size: 1.5rem;
+  margin: 6px 0px;
+  width: 40em;
+  height: 2em;
+  opacity: 0.8;
+}
+
+.skillsetbox span {
+  font-size: 2rem;
+  text-align: left;
+}
+
+#skillset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.dli-plus {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 1em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+}
+
+.dli-plus::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+#plus_btn:hover {
+  cursor: pointer;
+}
+
+#coa {
+  width: 60px;
+  height: 60px;
+}
+
+
+
+.contact-developer {
+  font-size: 1.6rem;
+  color: blue;
+  text-decoration: underline;
+}
+
+.contact-developer:visited {
+  color: blue;
+}
+
+.contents-blk {
+  border: 0.5px solid rgba(121, 126, 129, 0.5);
+  padding: 10px 0;
+}
+
+.contents-blk p {
+  font-size: 2rem;
+  height: 39px;
+  line-height: 39px;
+  display: inline-block;
+}
+
+.contents {
+  margin-top: 0px;
+}
+
+#first {
+  display: none;
+}
+
+#first_page {
+  display: block;
+}
+
+#second_page {
+  display: none;
+}
+
+#second_back_btn {
+  display: none;
+}
+
+#second_next_btn {
+  display: none;
+}
+
+#third_back_btn {
+  display: none;
+}
+
+#third_next_btn {
+  display: none;
+}
+
+#third_page {
+  display: none;
+}
+
+#result .result_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#result .result_box .koa_box {
+  width: 100%;
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+#result .result_box .koa_box p {
+  padding: 3px 8px;
+  margin: 0 5px;
+  background: white;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+
+.narrow-p p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin: 5px 0 0 20px;
+}
+
+.patch {
+  position: relative;
+  top: 0;
+  left: 10px;
+  width: 80%;
+  height: calc(ref(width));
+}
+
+.patch p {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  text-align: left;
+  overflow-y: scroll;
+  height: 30%;
+  width: 90%;
+  z-index: 10;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.patch p::-webkit-scrollbar {
+  display: none;
+}
+
+.patch img {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 80%;
+}
+
+.loading-box {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 10000;
+}
+
+.yue {
+  top: -80px;
+  right: 0;
+}
+
+.ran {
+  top: -80px;
+  left: 0;
+}
+
+
+@media screen and (max-width:899px) {
+  .logo-text {
+    font-size: 3rem;
+  }
+
+  .header-menu {
+    font-size: 3rem;
+  }
+
+  .select-box {
+    width: 80%;
+    max-width: 470px;
+  }
+
+  .skillbox {
+    width: 90%;
+  }
+
+  button {
+    font-size: 2rem;
+    margin: 5px 2px;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  .rem2 {
+    font-size: 1.5rem;
+  }
+
+  .contents-blk p {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* スマホ用 幅320pxで表示崩れがないようにすること*/
+@media screen and (max-width:599px) {
+  .sp {
+    display: block;
+  }
+
+  /* 三本線 */
+  #nav-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  #nav-toggle>div {
+    position: relative;
+    width: 36px;
+  }
+
+  #nav-toggle>div span {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    display: block;
+    background: #000;
+    position: absolute;
+    transition: transform .3s ease, top .5s ease;
+  }
+
+  #nav-toggle>div span:nth-child(1) {
+    top: 0;
+  }
+
+  #nav-toggle>div span:nth-child(2) {
+    top: 10px;
+  }
+
+  #nav-toggle>div span:nth-child(3) {
+    top: 20px;
+  }
+
+  .open #nav-toggle>div span:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+
+  .open #nav-toggle>div span:nth-child(2) {
+    width: 0;
+  }
+
+  .open #nav-toggle>div span:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+
+  header ul {
+    height: auto;
+  }
+
+  #page-header .header-nav {
+    background: url(../images/header.jpg);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 990;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 100px;
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+  }
+
+  .open #page-header .header-nav {
+    transform: translateX(0) !important;
+  }
+
+  #page-header .header-nav h1 {
+    display: block;
+    position: relative;
+    top: 80px;
+    text-align: left;
+  }
+
+  #page-header .header-nav ul {
+    display: block;
+    position: relative;
+    top: 80px;
+  }
+
+  #page-header .header-nav li {
+    position: relative;
+    margin: 0 !important;
+    text-align: left;
+    transition: transform 1.3s ease;
+  }
+
+  #page-header .header-nav li:hover {
+    animation-name: colorChangeAnime;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  #page-header .header-nav li a {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 2.8rem;
+  }
+
+  #page-header .header-nav ul>li:nth-child(2) {
+    transition-delay: .15s;
+  }
+
+  #page-header .header-nav ul>li:nth-child(3) {
+    transition-delay: .3s;
+  }
+
+  #page-header .header-nav ul>li:nth-child(4) {
+    transition-delay: .6s;
+  }
+
+  /* 通常 */
+  body {
+    font-size: 1.2rem;
+  }
+
+  .logo-text {
+    font-size: 3rem;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  section {
+    width: 95%;
+  }
+
+  .patch {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(ref(width));
+  }
+
+  .contact-developer {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .skillsetbox select {
+    width: 20em;
+  }
+
+  #result .result_box .koa_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .koa_box p {
+    margin: 5px;
+  }
+}
