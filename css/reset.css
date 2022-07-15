@@ -5,8 +5,12 @@ html {
     padding: 0;
     font-size: 62.5%;
     scrollbar-width: none;
+    overflow: auto;
 }
 
+body {
+    overflow: hidden;
+}
 
 html::-webkit-scrollbar {
     display: none;
