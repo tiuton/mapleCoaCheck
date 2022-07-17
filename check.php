@@ -52,17 +52,12 @@ $_SESSION["message"] = $message;
 
 <body>
     <header id="page-header">
-        <a href="./index.html" class="a-deco margin-top10">
-            <div class="flex">
-                <p class="logo-text margin-left10">
-                    <span class="icon-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span>
-                </p>
-                <p class="logo-text">雪いちご</p>
-            </div>
+        <a href="./top.html" class="a-deco margin-top10">
+            <img class="logo" src="./images/logo.png" alt="logo">
         </a>
         <nav class="margin-top10">
             <ul>
-                <li><a href="./index.html" class="header-menu">Top</a></li>
+                <li><a href="./top.html" class="header-menu">Top</a></li>
                 <li><a href="./tool.html" class="header-menu">Tool</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
@@ -77,7 +72,7 @@ $_SESSION["message"] = $message;
         <nav class="header-nav sp">
             <h1>Menu</h1>
             <ul>
-                <li><a href="./index.html" class="header-menu">Top</a></li>
+                <li><a href="./top.html" class="header-menu">Top</a></li>
                 <li><a href="./tool.html" class="header-menu">Tool</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
