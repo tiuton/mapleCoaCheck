@@ -11,118 +11,33 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="favicon.ico">
     <title>雪いちご</title>
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#nav-toggle').click(function () {
-                $('body').toggleClass('open');
-            });
-        });
-    </script>
 </head>
 
-<body id="about">
-    <video class="pc" autoplay muted playsinline loop>
-        <source src="./video/maple.mp4" type="video/mp4">
-    </video>
-    <div id="video" class="pc"></div>
-    <header id="page-header">
-        <a href="./index.html" class="a-deco margin-top10">
-            <div class="flex">
-                <p class="logo-text margin-left10">
-                    <span class="icon-logo"><span class="path1"></span><span class="path2"></span><span
-                            class="path3"></span><span class="path4"></span><span class="path5"></span><span
-                            class="path6"></span><span class="path7"></span><span class="path8"></span><span
-                            class="path9"></span><span class="path10"></span></span>
-                </p>
-                <p class="logo-text">雪いちご</p>
-            </div>
-        </a>
-        <nav class="margin-top10">
-            <ul>
-                <li><a href="./index.html" class="header-menu">Top</a></li>
-                <li><a href="./tool.html" class="header-menu">Tool</a></li>
-                <li><a href="./contact.php" class="header-menu">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="nav-toggle" class="sp">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <nav class="header-nav sp">
-            <h1>Menu</h1>
-            <ul>
-                <li><a href="./index.html" class="header-menu">Top</a></li>
-                <li><a href="./tool.html" class="header-menu">Tool</a></li>
-                <li><a href="./contact.php" class="header-menu">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <div id="first-content" class="boxCenter textLeft narrow-p border-line">
-                <h1>About us</h1>
-                <p>メイプルストーリーの楓鯖にて活動しているギルド「雪いちご」が運営するサイトです。</p>
-                <p>ゲームをプレイしていてこれがあったら便利だなーを実現しようとする技術系ギルドです。</p>
-                <p>あったら便利と思われるツールを開発して公開しています。</p>
-                <p>ツールの開発案や開発プロジェクトの参加も募集中です。</p>
-                <p>初心者でもとても親切な<a href="https://twitter.com/maiple9" class="contact-developer"
-                        target="_blank">まっこり</a>が指導してくれます。</p>
-                <p>ギルド員の募集もしています。</p>
+<body id="about" class="overflow">
+    <main class="margin0">
+        <section class="position margin0">
+            <video class="video pc" autoplay muted playsinline loop>
+                <source src="./video/maple.webm" type="video/webm">
+            </video>
+            <div class="sp">
+                <img class="video" src="./video/maple.png" alt="title">
+                <img class="rightbottom-position" src="./images/logo.png" alt="logo">
             </div>
         </section>
-        <section>
-            <div class="border-line">
-                <h1>History</h1>
-                <div class="patch boxCenter">
-                    <img src="./images/patch.jpg" alt="patch">
-                    <p>
-                        2022/07/15 レイアウトの調整<br>
-                        2022/06/24 スマホサイズ対応<br>
-                        2022/06/06 contact実装<br>
-                        2022/06/03 公開<br>
-                        2022/05/30 top実装<br>
-                        2022/05/23 開発にまっこり追加<br>
-                        2022/05/15 りんごちゃんの計算機実装<br>
-                        2022/05/07 ちうとんが作成開始</p>
-                </div>
+        <section class="absolute margin0">
+            <div class="width100">
+                <h1 class="start-h1">狩りしろ</h1>
+                <p>ギルド誕生から変わらない言葉</p>
+                <p>狩りしたギルドメンバーは</p>
+                <p>ちゃんと大人になった</p>
+            </div>
+            <div class="btn flex">
+                <a class="custom-btn btn-3" href="./top.html"><span>Top</span></a>
+                <a class="custom-btn btn-3" href="./tool.html"><span>Tool</span></a>
+                <a class="custom-btn btn-3" href="./contact.php"><span>Contact</span></a>
             </div>
         </section>
-        <section>
-            <div class="border-line">
-                <h1>Contact</h1>
-                <div>
-
-                    <div class="boxCenter textLeft narrow-p flex">
-                        <p><img src="./images/character/ishinoseirei.gif" alt="seirei"></p>
-                        <p class="boxCenter">
-                            ツールについての連絡先：<br>
-                            <a href="https://twitter.com/tiutonNL" class="contact-developer" target="_blank">ちうとん</a>
-                            または
-                            <a href="https://twitter.com/maiple9" class="contact-developer" target="_blank">まっこり</a>
-                            まで</p>
-                    </div>
-                    <div class="boxCenter textLeft narrow-p flex">
-                        <p><img src="./images/character/bird.gif" alt="bird"></p>
-                        <p>その他はゲーム内でギルド員にご相談ください</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div>
-            <img src="./images/character/ruminasu.gif" alt="luminous">
-            <img src="./images/character/rania.gif" alt="rania">
-            <img src="./images/character/ran.gif" alt="ran">
-            <img src="./images/character/yue.gif" alt="yue">
-        </div>
     </main>
-    <footer>
-        <p class="copyright">© 2022 yukiichigo inc. </p>
-    </footer>
 </body>
 
 </html>
