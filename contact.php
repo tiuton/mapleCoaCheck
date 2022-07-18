@@ -23,31 +23,11 @@ session_destroy();
   <title>雪いちご</title>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript">
-    // $(function() {
-    //   $("form").on("submit", function(event) {
-    //     $(".error-text").each(function() {
-    //       $(this).empty();
-    //     });
-    //     var isValid = true;
-    //     if ($("[name='name']").val() == "") {
-    //       isValid = false;
-    //       $("[name='name']").next('.error-text').toggleClass('active');
-    //     }
-    //     if ($("[name='email']").val() == "") {
-    //       isValid = false;
-    //       $("[name='email']").next('.error-text').toggleClass('active');
-    //     }
-    //     if ($("[name='message']").val() == "") {
-    //       isValid = false;
-    //       $("[name='message']").next('.error-text').toggleClass('active');
-    //     }
-
-    //     if (!isValid) {
-    //       return false;
-    //     }
-    //   });
-
-    // })
+    $(function() {
+      $('#nav-toggle').click(function() {
+        $('body').toggleClass('open');
+      });
+    });
   </script>
 </head>
 
@@ -97,7 +77,7 @@ session_destroy();
       </ul>
     </div>
     <form id="contact" name="form1" method="post" action="check.php">
-      <div class="container">
+      <div class="container fadeUp duration">
         <div class="head">
           <h1>Contact</h2>
         </div>
