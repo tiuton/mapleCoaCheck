@@ -3,7 +3,12 @@
 .fadeUp {
     animation-name: fadeUpAnime;
     animation-duration: 0.8s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
+}
+
+.duration {
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
 }
 
 .fadeOut {
@@ -31,12 +36,12 @@
 }
 
 @keyframes fadeUpAnime {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(10px);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: translateY();
     }
