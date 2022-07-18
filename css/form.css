@@ -5,9 +5,14 @@ h1 {
     color: white;
 }
 
+li {
+    text-align: left;
+}
+
 dd {
     margin: 20px auto;
     width: 90%;
+    position: relative;
 }
 
 .container {
@@ -142,6 +147,8 @@ textarea {
 input,
 textarea {
     font-size: 1.5rem;
+    font-family: charcuterie-contrast, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-size: 1.1em;
     padding: 15px 10px 10px;
     border: 1px solid #cecece;
     background: #d7d7d7;
@@ -156,6 +163,7 @@ textarea {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 80%;
+    position: relative;
 }
 
 ::-webkit-input-placeholder {
@@ -278,8 +286,6 @@ ol {
 
 
 .message {
-    font-family: 'Source Sans Pro', arial, sans-serif;
-    font-size: 1.1em;
     display: none;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -293,8 +299,31 @@ ol {
 }
 
 .error-text {
-    color: red;
-    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    padding: 3px 3px 2px;
+    background-color: #f66;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: #fff;
+    transform: translateY(-2.7em);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.error.active {
+    opacity: 1;
+}
+
+.error-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    border: 7px solid transparent;
+    border-top-color: #f66;
+    margin-left: 1px;
 }
 
 @media screen and (max-width:599px) {

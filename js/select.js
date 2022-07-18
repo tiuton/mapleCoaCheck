@@ -143,7 +143,6 @@ const indexScript = (() => {
             thirdPageView.style.display = "none";
             thirdBackBtn.style.display = "none";
             thirdNextBtn.style.display = "none";
-            // jobname.innerHTML = '<img src="./images/character/satu.gif" alt="satu"></img>';
             jobname.innerHTML += '職業名：' + select.value;
             loadSkill(0);
             SetSelectboxEvent();
@@ -189,20 +188,6 @@ const indexScript = (() => {
     //進むボタンを押したときの処理
     $(secondNextBtn).on("click", function () {
         $(".loading-box").show();
-        $(".yue").LoadingOverlay("show", {
-            image: "./images/character/yue.gif",
-            imageAnimation: "",
-            size: 150,
-            minSize: 150,
-            maxSize: 50
-        });
-        $(".ran").LoadingOverlay("show", {
-            image: "./images/character/ran.gif",
-            imageAnimation: "",
-            size: 150,
-            minSize: 150,
-            maxSize: 50
-        });
         setTimeout(() => {
             compareSelect();
         }, 1000);

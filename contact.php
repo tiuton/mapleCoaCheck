@@ -16,24 +16,44 @@ session_destroy();
   <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
   <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
   <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
-  <link rel="stylesheet" href="https://use.typekit.net/upr2vdx.css">
+  <script src="./js/fontload.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/form.css">
   <link rel="icon" href="favicon.ico">
   <title>雪いちご</title>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript">
-    $(function() {
-      $('#nav-toggle').click(function() {
-        $('body').toggleClass('open');
-      });
-    });
+    // $(function() {
+    //   $("form").on("submit", function(event) {
+    //     $(".error-text").each(function() {
+    //       $(this).empty();
+    //     });
+    //     var isValid = true;
+    //     if ($("[name='name']").val() == "") {
+    //       isValid = false;
+    //       $("[name='name']").next('.error-text').toggleClass('active');
+    //     }
+    //     if ($("[name='email']").val() == "") {
+    //       isValid = false;
+    //       $("[name='email']").next('.error-text').toggleClass('active');
+    //     }
+    //     if ($("[name='message']").val() == "") {
+    //       isValid = false;
+    //       $("[name='message']").next('.error-text').toggleClass('active');
+    //     }
+
+    //     if (!isValid) {
+    //       return false;
+    //     }
+    //   });
+
+    // })
   </script>
 </head>
 
 <body>
   <header id="page-header">
-    <a href="./top.html" class="a-deco margin-top10">
+    <a href="./index.html" class="a-deco margin-top10">
       <img class="logo" src="./images/logo.png" alt="logo">
     </a>
     <nav class="margin-top10">
@@ -83,7 +103,8 @@ session_destroy();
         </div>
         <dl>
           <dd> <input type="text" name="name" placeholder="Name" value="<?php echo $name; ?>">
-            <div class="error-text"></div>
+            <div class="error-text">
+            </div>
           </dd>
           <dd> <input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
             <div class="error-text"></div>
@@ -129,19 +150,34 @@ session_destroy();
     if ($("[name='name']").val() == "") {
       isValid = false;
       $("[name='name']").next().text("名前を入力してください。")
+      $("[name='name']").next('.error-text').css("opacity", "1");
     }
     if ($("[name='email']").val() == "") {
       isValid = false;
       $("[name='email']").next().text("メールアドレスを入力してください。")
+      $("[name='email']").next('.error-text').css("opacity", "1");
     }
     if ($("[name='message']").val() == "") {
       isValid = false;
       $("[name='message']").next().text("問い合わせ内容を入力してください。")
+      $("[name='message']").next('.error-text').css("opacity", "1");
     }
 
     if (!isValid) {
       return false;
     }
+  });
+
+  $("[name='name']").on('change', function(event) {
+    $("[name='name']").next('.error-text').css("opacity", "0");
+  });
+
+  $("[name='email']").on('change', function(event) {
+    $("[name='email']").next('.error-text').css("opacity", "0");
+  });
+
+  $("[name='message']").on('change', function(event) {
+    $("[name='message']").next('.error-text').css("opacity", "0");
   });
 </script>
 

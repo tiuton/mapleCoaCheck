@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: bokutachi;
+    src: url("../font/bokutachi.otf") format("opentype");
+}
+
 html {
     margin: 0 auto;
     padding: 0;
@@ -10,6 +15,7 @@ html {
 
 body {
     overflow: hidden;
+    font-family: bokutachi;
 }
 
 html::-webkit-scrollbar {
@@ -38,4 +44,9 @@ a,
 p {
     margin: 0;
     padding: 0;
+}
+
+button {
+    font-family: bokutachi;
+    color: #1c1f20;
 }

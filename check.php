@@ -9,7 +9,7 @@ if (strlen(trim($name)) == 0) {
     $error[] = "名前を入力してください。";
 }
 if (strlen(trim($email)) == 0) {
-    $error[] = "メールを入力してください。";
+    $error[] = "メールアドレスを入力してください。";
 } else {
     if (!preg_match(
         "/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/",
@@ -35,7 +35,7 @@ $_SESSION["message"] = $message;
     <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
     <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
-    <link rel="stylesheet" href="https://use.typekit.net/upr2vdx.css">
+    <script src="./js/fontload.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/form.css">
     <link rel="icon" href="favicon.ico">
@@ -52,7 +52,7 @@ $_SESSION["message"] = $message;
 
 <body>
     <header id="page-header">
-        <a href="./top.html" class="a-deco margin-top10">
+        <a href="./index.html" class="a-deco margin-top10">
             <img class="logo" src="./images/logo.png" alt="logo">
         </a>
         <nav class="margin-top10">
