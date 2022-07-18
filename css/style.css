@@ -2,11 +2,7 @@
 @import url("./reset.css");
 @import url("./animation.css");
 @import url("./icon.css");
-
-@font-face {
-  font-family: bokutachi;
-  src: url("../font/bokutachi.otf") format("opentype");
-}
+@import url("./customButton.css");
 
 /* 汎用 */
 .sp {
@@ -98,9 +94,24 @@
   width: 100vw;
 }
 
-/* index */
+.justify-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: 10001;
+  top: 50%;
+}
+
+/* index.html */
 .start-h1 {
   font-size: 7rem;
+  font-family: ab-suzume, sans-serif;
+}
+
+.start-h1 span {
+  font-family: sans-serif;
+  ;
 }
 
 .absolute {
@@ -130,111 +141,19 @@
   display: flex;
   justify-content: space-around;
   width: 40vw;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 
-.custom-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25vw;
-  height: 50px;
-  border-radius: 5px;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  top: 20px;
-  margin: 0 10px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-    7px 7px 20px 0px rgba(0, 0, 0, .1),
-    4px 4px 5px 0px rgba(0, 0, 0, .1);
+#goroku {
+  z-index: 11;
+  font-family: bokutachi, sans-serif;
 }
 
-.btn-3 {
-  background: rgb(0, 172, 238);
-  background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
-  font-family: charcuterie-contrast;
-  font-size: 2rem;
-  line-height: 50px;
-  border: none;
-  text-decoration: none;
-}
-
-.btn-3 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.btn-3:before,
-.btn-3:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  background: rgba(2, 126, 251, 1);
-  transition: all 0.3s ease;
-}
-
-.btn-3:before {
-  height: 0%;
-  width: 2px;
-}
-
-.btn-3:after {
-  width: 0%;
-  height: 2px;
-}
-
-.btn-3:hover {
-  background: transparent;
-  box-shadow: none;
-}
-
-.btn-3:hover:before {
-  height: 100%;
-}
-
-.btn-3:hover:after {
-  width: 100%;
-}
-
-.btn-3 span:hover {
-  color: rgba(2, 126, 251, 1);
-}
-
-.btn-3:visited {
-  color: #54484B;
-}
-
-.btn-3 span:before,
-.btn-3 span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  background: rgba(2, 126, 251, 1);
-  transition: all 0.3s ease;
-}
-
-.btn-3 span:before {
-  width: 2px;
-  height: 0%;
-}
-
-.btn-3 span:after {
-  width: 0%;
-  height: 2px;
-}
-
-.btn-3 span:hover:before {
-  height: 100%;
-}
-
-.btn-3 span:hover:after {
-  width: 100%;
+#img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px 15px #FFF;
 }
 
 /* ヘッダー */
@@ -306,14 +225,13 @@ footer {
 
 h1 {
   font-size: 4rem;
-  font-family: charcuterie-contrast, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-family: charcuterie-contrast, ab-kirigirisu, sans-serif;
   text-align: center;
   color: #54484B;
 }
 
 
 body {
-  font-family: bokutachi;
   font-size: 1.6rem;
   line-height: 2.1;
   color: #1c1f20;
@@ -359,8 +277,6 @@ section {
 button {
   display: inline-block;
   font-size: 2rem;
-  font-family: bokutachi;
-  color: #1c1f20;
   width: 80%;
   height: 2em;
   background: rgba(157, 250, 155, 1);
@@ -609,24 +525,24 @@ select::-ms-expand {
 }
 
 .loading-box {
-  width: 50%;
-  height: 100vh;
-  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   display: none;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 10000;
 }
 
-.yue {
-  top: -80px;
-  right: 0;
+.character {
+  transform: scale(1.3);
+  margin: 0 10px;
 }
 
 .ran {
-  top: -80px;
-  left: 0;
+  transform: scale(-1.3, 1.3);
 }
-
 
 @media screen and (max-width:899px) {
   .logo-text {
@@ -672,6 +588,14 @@ select::-ms-expand {
     width: 25vw;
   }
 
+  .character {
+    transform: scale(1.1);
+    margin: 0 5px;
+  }
+
+  .ran {
+    transform: scale(-1.3, 1.3);
+  }
 
 }
 

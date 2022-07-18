@@ -7,14 +7,17 @@
     <meta name="keyword" content="雪いちご,ちうとん,メイプルストーリー,maplestory,コアジェム,ツール" />
     <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
-    <link rel="stylesheet" href="https://use.typekit.net/upr2vdx.css">
+    <script src="./js/fontload.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="favicon.ico">
     <title>雪いちご</title>
+
 </head>
 
 <body id="about" class="overflow">
     <main class="margin0">
+        <div id="goroku" class="fadeOut pc"></div>
         <section class="position margin0">
             <video class="video pc" autoplay muted playsinline loop>
                 <source src="./video/maple.webm" type="video/webm">
@@ -26,7 +29,7 @@
         </section>
         <section class="absolute margin0">
             <div class="width100">
-                <h1 class="start-h1">狩りしろ</h1>
+                <h1 class="start-h1"><span>狩</span>りしろ</h1>
                 <p>ギルド誕生から変わらない言葉</p>
                 <p>狩りしたギルドメンバーは</p>
                 <p>ちゃんと大人になった</p>
@@ -38,6 +41,53 @@
             </div>
         </section>
     </main>
+    <script>
+        let count = 0;
+
+        function randimgpos() {
+            // let arr = [
+            //     "いっぞ",
+            //     "塔はまだか？",
+            //     "ばね指",
+            //     "毎秒狩りしろ",
+            //     "世界樹デイリー募集こちら6人",
+            //     "たみのん230おめー",
+            //     "おやすみママ",
+            //     "ガキおじゃ",
+            //     "僕はｗｗ以上ですｗｗ",
+            //     "指びよーん",
+            //     "うい",
+            //     "おじゃ",
+            //     "YO",
+            //     "パン玉、あげよっか…？",
+            //     "「かんぱん」なんだよなぁ",
+            //     "雑魚ダウン！",
+            //     "雪いちご入って彼女ができました",
+            //     "ばんわーｗｗ",
+            // ]
+            // rand_text = Math.floor(Math.random() * arr.length);
+            rand_num = Math.floor(Math.random() * 16);
+            h = $("body").height();
+            w = $("body").width();
+            rand_x = Math.floor(Math.random() * (w - w * 0.5));
+            rand_y = Math.floor(Math.random() * (h - h * 0.5));
+            var obj = document.getElementById("goroku");
+            obj.innerHTML = '<img id="img" src="./images/ss/' + rand_num + '.png" alt="image">';
+            obj.style.display = "none"
+            obj.style.position = "absolute"
+            obj.style.left = rand_x + "px";
+            obj.style.top = rand_y + "px";
+
+            if (count % 2 == 0) {
+                obj.style.display = "block"
+            }
+            if (w <= 600) {
+                obj.style.display = "none";
+            }
+            count++;
+        }
+        setInterval(randimgpos, 2800);
+    </script>
 </body>
 
 </html>

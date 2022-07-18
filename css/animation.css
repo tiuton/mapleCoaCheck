@@ -4,7 +4,30 @@
     animation-name: fadeUpAnime;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
-    opacity: 0;
+}
+
+.fadeOut {
+    animation-name: fadeOutAnime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnime {
+    0% {
+        opacity: 0;
+        font-size: 1rem;
+        transform: scale(0.8);
+    }
+
+    75% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+        font-size: 5rem;
+        transform: scale(1.2);
+    }
 }
 
 @keyframes fadeUpAnime {
@@ -83,6 +106,30 @@
 
 .delay-time16 {
     animation-delay: 1.6s;
+}
+
+.delay-time20 {
+    animation-delay: 2.0s;
+}
+
+.delay-time30 {
+    animation-delay: 3.0s;
+}
+
+.delay-time40 {
+    animation-delay: 4.0s;
+}
+
+.delay-time50 {
+    animation-delay: 5.0s;
+}
+
+.delay-time60 {
+    animation-delay: 6.0s;
+}
+
+.delay-time70 {
+    animation-delay: 7.0s;
 }
 
 @keyframes colorChangeAnime {

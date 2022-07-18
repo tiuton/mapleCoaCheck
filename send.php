@@ -72,7 +72,7 @@ session_destroy();
     <meta name="keyword" content="メイプルストーリー,maplestory,コアジェム,ツール" />
     <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
-    <link rel="stylesheet" href="https://use.typekit.net/upr2vdx.css">
+    <script src="./js/fontload.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/form.css">
     <title>雪いちご</title>
@@ -88,7 +88,7 @@ session_destroy();
 
 <body>
     <header id="page-header">
-        <a href="./top.html" class="a-deco margin-top10">
+        <a href="./index.html" class="a-deco margin-top10">
             <img class="logo" src="./images/logo.png" alt="logo">
         </a>
         <nav class="margin-top10">
