@@ -51,7 +51,7 @@ $_SESSION["message"] = $message;
 </head>
 
 <body>
-    <header id="page-header">
+    <header id="page-header" class="fadeUp duration2">
         <a href="./index.html" class="a-deco margin-top10">
             <img class="logo" src="./images/logo.png" alt="logo">
         </a>

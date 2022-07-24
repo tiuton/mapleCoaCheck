@@ -11,6 +11,11 @@
     animation-delay: 0.5s;
 }
 
+.duration2 {
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+}
+
 .fadeOut {
     animation-name: fadeOutAnime;
     animation-duration: 3s;
