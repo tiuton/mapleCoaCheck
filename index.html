@@ -9,7 +9,7 @@
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
     <script src="./js/fontload.js"></script>
     <script src="./js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" href="favicon.ico">
     <title>雪いちご</title>
 
@@ -37,60 +37,13 @@
             <div class="btn flex">
                 <a class="custom-btn btn-3" href="./top.html"><span>Top</span></a>
                 <a class="custom-btn btn-3" href="./tool.html"><span>Tool</span></a>
+                <a class="custom-btn btn-3" href="./article.html"><span>Staff</span></a>
                 <a class="custom-btn btn-3" href="./contact.php"><span>Contact</span></a>
             </div>
         </section>
     </main>
     <script>
-        let count = 0;
 
-        function randimgpos() {
-            // let arr = [
-            //     "いっぞ",
-            //     "塔はまだか？",
-            //     "ばね指",
-            //     "毎秒狩りしろ",
-            //     "世界樹デイリー募集こちら6人",
-            //     "たみのん230おめー",
-            //     "おやすみママ",
-            //     "ガキおじゃ",
-            //     "僕はｗｗ以上ですｗｗ",
-            //     "指びよーん",
-            //     "うい",
-            //     "おじゃ",
-            //     "YO",
-            //     "パン玉、あげよっか…？",
-            //     "「かんぱん」なんだよなぁ",
-            //     "雑魚ダウン！",
-            //     "雪いちご入って彼女ができました",
-            //     "ばんわーｗｗ",
-            //     "MVPほちいのん！ほちいのんったらほちいのん！",
-            //     "KAAAAAAA",
-            //     "高級装備強化の書の力によってタイラントヘルメスブーツが破壊されました"
-            // ]
-            // rand_text = Math.floor(Math.random() * arr.length);
-            rand_num = Math.floor(Math.random() * 21);
-            h = $("body").height();
-            w = $("body").width();
-            rand_x = Math.floor(Math.random() * (w - w * 0.5));
-            rand_y = Math.floor(Math.random() * (h - h * 0.5));
-            var obj = document.getElementById("goroku");
-            obj.innerHTML = '<img id="img" src="./images/ss/' + rand_num + '.png" alt="image">';
-            obj.style.display = "none"
-            obj.style.position = "absolute"
-            obj.style.left = rand_x + "px";
-            obj.style.top = rand_y + "px";
-
-            if (count % 2 == 0) {
-                obj.style.display = "block"
-            }
-            if (w <= 600) {
-                obj.style.display = "none";
-            }
-            count++;
-        }
-        randimgpos()
-        setInterval(randimgpos, 2800);
     </script>
 </body>
 

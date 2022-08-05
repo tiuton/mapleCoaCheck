@@ -1,0 +1,49 @@
+  // let count = 0;
+
+        // function randimgpos() {
+        // let arr = [
+        //     "いっぞ",
+        //     "塔はまだか？",
+        //     "ばね指",
+        //     "毎秒狩りしろ",
+        //     "世界樹デイリー募集こちら6人",
+        //     "たみのん230おめー",
+        //     "おやすみママ",
+        //     "ガキおじゃ",
+        //     "僕はｗｗ以上ですｗｗ",
+        //     "指びよーん",
+        //     "うい",
+        //     "おじゃ",
+        //     "YO",
+        //     "パン玉、あげよっか…？",
+        //     "「かんぱん」なんだよなぁ",
+        //     "雑魚ダウン！",
+        //     "雪いちご入って彼女ができました",
+        //     "ばんわーｗｗ",
+        //     "MVPほちいのん！ほちいのんったらほちいのん！",
+        //     "KAAAAAAA",
+        //     "高級装備強化の書の力によってタイラントヘルメスブーツが破壊されました"
+        // ]
+        // rand_text = Math.floor(Math.random() * arr.length);
+        //     rand_num = Math.floor(Math.random() * 21);
+        //     h = $("body").height();
+        //     w = $("body").width();
+        //     rand_x = Math.floor(Math.random() * (w - w * 0.5));
+        //     rand_y = Math.floor(Math.random() * (h - h * 0.5));
+        //     var obj = document.getElementById("goroku");
+        //     obj.innerHTML = '<img id="img" src="./images/ss/' + rand_num + '.png" alt="image">';
+        //     obj.style.display = "none"
+        //     obj.style.position = "absolute"
+        //     obj.style.left = rand_x + "px";
+        //     obj.style.top = rand_y + "px";
+
+        //     if (count % 2 == 0) {
+        //         obj.style.display = "block"
+        //     }
+        //     if (w <= 600) {
+        //         obj.style.display = "none";
+        //     }
+        //     count++;
+        // }
+        // randimgpos()
+        // setInterval(randimgpos, 2800);

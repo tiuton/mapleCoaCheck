@@ -36,7 +36,6 @@ $_SESSION["message"] = $message;
     <meta name="description" content="メイプルストーリーのギルド雪いちごのサイトです。ゲームをプレイしてこれがあったら便利だなーってツールを作っています。" />
     <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
     <script src="./js/fontload.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/form.css">
     <link rel="icon" href="favicon.ico">
     <title>雪いちご</title>
@@ -59,6 +58,7 @@ $_SESSION["message"] = $message;
             <ul>
                 <li><a href="./top.html" class="header-menu">Top</a></li>
                 <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li><a href="./article.html" class="header-menu">Staff</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
         </nav>
@@ -74,6 +74,7 @@ $_SESSION["message"] = $message;
             <ul>
                 <li><a href="./top.html" class="header-menu">Top</a></li>
                 <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li><a href="./article.html" class="header-menu">Staff</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
         </nav>

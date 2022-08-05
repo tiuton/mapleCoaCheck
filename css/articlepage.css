@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+h2 {
+    margin: 0 auto;
+    border-bottom: 3px double red;
+    width: 80%;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1f20;
+}
+
+a:visited {
+    color: #1c1f20;
+}
+
+a:hover {
+    color: rgba(28, 31, 32, 0.7);
+}
+
+.flex {
+    padding-top: 20px;
+}
+
+.text {
+    font-size: 1.3rem;
+    margin-left: 5px;
+}
+
+.player-menu {
+    color: rgb(241, 243, 248);
+    background-color: #ff7e94;
+}
+
+.text-img {
+    margin: 50px 0;
+}
+
+.margin10 {
+    margin-left: 3vw;
+}
+
+.margin80 {
+    margin-top: 80px;
+}
+
+.width80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.width90 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+.text-mat {
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+    width: 70%;
+    margin: 80px auto 0 50px;
+    padding: 100px 0;
+}
+
+.right-mat {
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+    width: 20%;
+    margin: 80px auto 0 50px;
+    padding-bottom: 20px;
+    vertical-align: top;
+}
+
+@media screen and (max-width:600px) {
+    .text-mat {
+        background-color: white;
+        border-radius: 10px;
+        height: 100%;
+        width: 90%;
+        margin: 80px auto 20px;
+        padding: 100px 0;
+    }
+
+    .right-mat {
+        background-color: white;
+        border-radius: 10px;
+        height: 100%;
+        width: 90%;
+        margin: 80px auto 20px;
+        padding-bottom: 20px;
+        vertical-align: top;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .text-img {
+        height: 70%;
+        width: 70%;
+    }
+}

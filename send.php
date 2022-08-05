@@ -61,6 +61,15 @@ $admin_result = mb_send_mail($admin_to, $admin_subject, $body, $admin_header);
 //--------------------------------------
 $_SESSION = array();
 session_destroy();
+//htmlに埋め込み
+
+$admin_result = true;
+$insert_h2 = "";
+if ($user_result && $admin_result) {
+    $insert_h2 =  "Send Completely!!\n";
+} else {
+    $insert_h2 = "<p>Transmission error</p><p>Please retry again</p>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -95,6 +104,7 @@ session_destroy();
             <ul>
                 <li><a href="./top.html" class="header-menu">Top</a></li>
                 <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li><a href="./article.html" class="header-menu">Staff</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
         </nav>
@@ -110,6 +120,7 @@ session_destroy();
             <ul>
                 <li><a href="./top.html" class="header-menu">Top</a></li>
                 <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li><a href="./article.html" class="header-menu">Staff</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
         </nav>
@@ -117,19 +128,8 @@ session_destroy();
     <main>
         <form id="contact" name="form1" method="post" action="check.php">
             <div class="container">
-                <div class="head">
-
-                </div>
-                <h2>
-                    <?php
-                    $admin_result = true;
-                    if ($user_result && $admin_result) {
-                        echo "Send Completely!!\n";
-                    } else {
-                        echo "<p>Transmission error</p>";
-                        echo "<p>Please retry again</p>";
-                    }
-                    ?>
+                <div class="head"></div>
+                <h2><?php echo $insert_h2; ?>
                 </h2>
             </div>
         </form>

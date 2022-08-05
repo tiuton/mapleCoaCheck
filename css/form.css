@@ -1,8 +1,19 @@
 @charset "UTF-8";
 @import url(./style.css);
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 h1 {
     color: white;
+}
+
+h2 {
+    text-align: center;
+    padding: 18px 0 18px 0;
+    font-size: 1.4em;
 }
 
 li {
@@ -34,11 +45,7 @@ dd {
     margin: 0 auto;
 }
 
-h2 {
-    text-align: center;
-    padding: 18px 0 18px 0;
-    font-size: 1.4em;
-}
+
 
 input {
     margin-bottom: 10px;
@@ -278,10 +285,6 @@ ol {
     button {
         width: 90%;
     }
-
-    body {
-        padding-top: 10px;
-    }
 }
 
 
@@ -333,5 +336,9 @@ ol {
 
     .header-nav h1 {
         color: #54484B;
+    }
+
+    .loopSlide {
+        display: none;
     }
 }

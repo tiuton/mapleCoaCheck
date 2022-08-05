@@ -40,6 +40,7 @@ session_destroy();
       <ul>
         <li><a href="./top.html" class="header-menu">Top</a></li>
         <li><a href="./tool.html" class="header-menu">Tool</a></li>
+        <li><a href="./article.html" class="header-menu">Staff</a></li>
         <li><a href="./contact.php" class="header-menu">Contact</a></li>
       </ul>
     </nav>
@@ -55,6 +56,7 @@ session_destroy();
       <ul>
         <li><a href="./top.html" class="header-menu">Top</a></li>
         <li><a href="./tool.html" class="header-menu">Tool</a></li>
+        <li><a href="./article.html" class="header-menu">Staff</a></li>
         <li><a href="./contact.php" class="header-menu">Contact</a></li>
       </ul>
     </nav>

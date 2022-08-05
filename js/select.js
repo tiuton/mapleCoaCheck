@@ -297,7 +297,6 @@ const indexScript = (() => {
                 }
             }
         }
-        console.log(wantData);
 
 
         let finalData = ``;
@@ -320,7 +319,6 @@ const indexScript = (() => {
             for (let i = 0; i < wantData.length; i++) {
                 for (let j = 0; j < wantData[i].length; j++) {
                     if (wantData[i][j][0] == selectId1.value) {
-                        console.log("ここ" + wantData[i][j][1]);
                         if ((((wantData[i][j][1] == selectId2.value) && (wantData[i][j][2] == selectId3.value))) ||
                             (((wantData[i][j][1] == "自由枠") && (wantData[i][j][2] == selectId3.value))) ||
                             (((wantData[i][j][1] == selectId2.value) && (wantData[i][j][2] == "自由枠")))) {
@@ -464,7 +462,6 @@ const indexScript = (() => {
                 pass(test1);
                 pass(test2);
                 pass(test3);
-                console.log(passCounter);
                 let isTwo = passCounter.every(function (value) {
                     return value == 2;
                 });
@@ -483,7 +480,6 @@ const indexScript = (() => {
                     return resultList;
                 }
                 numyo += 1;
-                console.log(numyo);
                 function pass(array) {
                     array.forEach(element => {
                         for (let j = 0; j < wantSkill.length; j++) {

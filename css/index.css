@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url(./style.css);
+@import url("./customButton.css");
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.start-h1 {
+    font-size: 7rem;
+    font-family: ab-suzume, sans-serif;
+}
+
+.start-h1 span {
+    font-family: sans-serif;
+}
+
+.absolute {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100vw;
+    z-index: 11;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.rightbottom-position {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+    margin: 10px auto 0;
+}
+
+#goroku {
+    z-index: 11;
+    font-family: bokutachi, sans-serif;
+}
+
+#img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 15px #FFF;
+}
+
+@media screen and (max-width:899px) {
+    .btn {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .custom-btn {
+        width: 25vw;
+    }
+}
+
+/* スマホ用 幅320pxで表示崩れがないようにすること*/
+@media screen and (max-width:599px) {
+    .btn {
+        flex-direction: column;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .custom-btn {
+        width: 80vw;
+        margin-bottom: 5px;
+    }
+
+}

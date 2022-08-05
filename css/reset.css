@@ -16,6 +16,7 @@ html {
 body {
     overflow: hidden;
     font-family: bokutachi;
+    font-size: 1.6rem;
 }
 
 html::-webkit-scrollbar {

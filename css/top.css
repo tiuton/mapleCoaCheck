@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url(./style.css);
+
+.contact-developer {
+    color: blue;
+    text-decoration: underline;
+}
+
+.contact-developer:visited {
+    color: blue;
+}
+
+.narrow-p p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin: 5px 0 0 20px;
+}
+
+.patch {
+    position: relative;
+    top: 0;
+    left: 10px;
+    width: 80%;
+    height: calc(ref(width));
+}
+
+.patch p {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    text-align: left;
+    overflow-y: scroll;
+    height: 30%;
+    width: 90%;
+    z-index: 10;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.patch p::-webkit-scrollbar {
+    display: none;
+}
+
+.patch img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 80%;
+}
+
+.ran {
+    transform: scale(-1, 1);
+}
+
+
+/* スマホ用 幅320pxで表示崩れがないようにすること*/
+@media screen and (max-width:599px) {
+    .patch {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(ref(width));
+    }
+}
