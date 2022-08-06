@@ -103,6 +103,20 @@ a:hover {
     width: 60px;
 }
 
+.icon4 {
+    border-radius: 50%;
+    border: 2px solid #9cff96;
+    height: 60px;
+    width: 60px;
+}
+
+.icon5 {
+    border-radius: 50%;
+    border: 2px solid #FFFA96;
+    height: 60px;
+    width: 60px;
+}
+
 @media screen and (max-width:600px) {
     .text-mat {
         background-color: white;
