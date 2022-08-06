@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="keyword" content="雪いちご,ちうとん,メイプルストーリー,maplestory,コアジェム,ツール" />
+  <meta name="description" content="メイプルストーリーの理想のスキルの組み合わせを見つけます。" />
+  <meta name="google-site-verification" content="vZm_VOhP1uJBQr-sku1oklL5SVCzVOKnahldYYnW71E" />
+  <script src="./js/fontload.js"></script>
+  <link rel="stylesheet" href="./css/ringocal.css" />
+  <link rel="icon" href="favicon.ico">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/loadingoverlay.min.js"></script>
+  <title>雪いちご</title>
+  <script type="text/javascript">
+    $(function () {
+      $('#nav-toggle').click(function () {
+        $('body').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="loading-box">
+    <div class="justify-center">
+      <div>
+        <img class="character" src="./images/character/ruminasu.gif" alt="ruminus">
+        <img class="character" src="./images/character/rania.gif" alt="rania">
+      </div>
+      <div>
+        <img class="ran" src="./images/character/ran.gif" alt="ran">
+        <img class="character" src="./images/character/yue.gif" alt="yue">
+      </div>
+    </div>
+  </div>
+
+  <header id="page-header" class="fadeUp duration2">
+    <a href="./index.html" class="a-deco margin-top10">
+      <img class="logo" src="./images/logo.png" alt="logo">
+    </a>
+    <nav class="margin-top10 pc">
+      <ul class="header-dropmenu">
+        <li><a href="./top.html" class="header-menu">Top</a></li>
+        <li>
+          <p class="header-menu">Tool</p>
+          <ul>
+            <li><a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a></li>
+            <li><a href="./weeklyboss.html" class="header-a">週ボス計算機</a></li>
+          </ul>
+        </li>
+        <li><a href="./article.html" class="header-menu">Staff</a></li>
+        <li><a href="./contact.php" class="header-menu">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="nav-toggle" class="sp">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav class="header-nav sp">
+      <h1 class="h1-1 padding-left10">Menu</h1>
+      <ul>
+        <li class="h1-5"><a href="./top.html" class="header-menu">Top</a></li>
+        <li class="h1-6">
+          <details>
+            <summary>Tool</summary>
+            <a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a>
+            <a href="./weeklyboss.html" class="header-a">週ボス計算機</a>
+          </details>
+        </li>
+        <li class="h1-7"><a href="./article.html" class="header-menu">Staff</a></li>
+        <li class="h1-8"><a href="./contact.php" class="header-menu">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="border-line">
+      <div class="contents margin-bottom30 fadeUp duration">
+        <h1 class="h1-3 width80">りんごちゃんの計算機</h1>
+        <p>コア枠がぎりぎり！ほしいスキルの3重複を狙いたい！</p>
+        <p>でも、どういう組み合わせにしたらよいかわからない！</p>
+        <p>出張先でもデイリーを欠かさないプロメイプラーりんごちゃんの悩みを解決するツールです。</p>
+        <div id="first_page">
+          <div class="contents-blk textCenter">
+            <label for="job" class="block h1-1 width80">職業</label>
+            <select name="job" id="job" class="select-box">
+              <option value="未選択" selected="">未選択</option>
+            </select>
+          </div>
+          <div id="first">
+            <div class="contents-blk">
+              <p class="width100 textCenter">重複を狙うスキルを選ぶ</p>
+              <div class="skillselect" id="skill">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="second_page">
+          <div class="contents-blk">
+            <div>
+              <div id="jobname" class="rem2 textCenter width100 ">
+                <!-- ここに職業名表示 -->
+              </div>
+              <p>持っているスキルの組み合わせを選択</p>
+              <img id="coa" src="images/coa.svg" alt="coa">
+            </div>
+          </div>
+          <div id="skillset" class="select-box fadeUp delay-time03">
+            <!-- ここにスキル名のセット表示 -->
+          </div>
+          <span id="plus_btn" class="dli-plus"></span>
+        </div>
+
+        <div id="third_page">
+          <div class="contents-blk">
+            <div id="result">
+              <!-- ここ結果表示 -->
+
+              <!-- ここまで -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button id="next_btn" class="fadeUp">進む</button>
+        <button id="reset_btn" class="fadeUp">リセット</button>
+        <button id="second_next_btn" class="fadeUp">進む</button>
+        <button id="second_back_btn" class="fadeUp">戻る</button>
+        <button id="third_back_btn" class="fadeUp">1つ前に戻る</button>
+        <button id="third_next_btn" class="fadeUp">最初に戻る</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p class="copyright">© yukiichigo 2022.</p>
+  </footer>
+  <script src="./js/select.js"></script>
+</body>
+
+</html>

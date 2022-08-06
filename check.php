@@ -54,10 +54,16 @@ $_SESSION["message"] = $message;
         <a href="./index.html" class="a-deco margin-top10">
             <img class="logo" src="./images/logo.png" alt="logo">
         </a>
-        <nav class="margin-top10">
-            <ul>
+        <nav class="margin-top10 pc">
+            <ul class="header-dropmenu">
                 <li><a href="./top.html" class="header-menu">Top</a></li>
-                <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li>
+                    <p class="header-menu">Tool</p>
+                    <ul>
+                        <li><a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a></li>
+                        <li><a href="./weeklyboss.html" class="header-a">週ボス計算機</a></li>
+                    </ul>
+                </li>
                 <li><a href="./article.html" class="header-menu">Staff</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
@@ -70,19 +76,25 @@ $_SESSION["message"] = $message;
             </div>
         </div>
         <nav class="header-nav sp">
-            <h1>Menu</h1>
+            <h1 class="h1-1 padding-left10">Menu</h1>
             <ul>
-                <li><a href="./top.html" class="header-menu">Top</a></li>
-                <li><a href="./tool.html" class="header-menu">Tool</a></li>
-                <li><a href="./article.html" class="header-menu">Staff</a></li>
-                <li><a href="./contact.php" class="header-menu">Contact</a></li>
+                <li class="h1-5"><a href="./top.html" class="header-menu">Top</a></li>
+                <li class="h1-6">
+                    <details>
+                        <summary>Tool</summary>
+                        <a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a>
+                        <a href="./weeklyboss.html" class="header-a">週ボス計算機</a>
+                    </details>
+                </li>
+                <li class="h1-7"><a href="./article.html" class="header-menu">Staff</a></li>
+                <li class="h1-8"><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <form id="contact" name="form1" method="post" action="">
+        <form id="contact" class="margin-top80" name="form1" method="post" action="">
             <div class="container">
-                <div class="head">
+                <div class="head width80">
                     <h1>Check</h1>
                 </div>
                 <div>

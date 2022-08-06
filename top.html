@@ -26,10 +26,16 @@
         <a href="./index.html" class="a-deco margin-top10">
             <img class="logo" src="./images/logo.png" alt="logo">
         </a>
-        <nav class="margin-top10">
-            <ul>
+        <nav class="margin-top10 pc">
+            <ul class="header-dropmenu">
                 <li><a href="./top.html" class="header-menu">Top</a></li>
-                <li><a href="./tool.html" class="header-menu">Tool</a></li>
+                <li>
+                    <p class="header-menu">Tool</p>
+                    <ul>
+                        <li><a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a></li>
+                        <li><a href="./weeklyboss.html" class="header-a">週ボス計算機</a></li>
+                    </ul>
+                </li>
                 <li><a href="./article.html" class="header-menu">Staff</a></li>
                 <li><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
@@ -42,69 +48,81 @@
             </div>
         </div>
         <nav class="header-nav sp">
-            <h1>Menu</h1>
+            <h1 class="h1-1 padding-left10">Menu</h1>
             <ul>
-                <li><a href="./top.html" class="header-menu">Top</a></li>
-                <li><a href="./tool.html" class="header-menu">Tool</a></li>
-                <li><a href="./article.html" class="header-menu">Staff</a></li>
-                <li><a href="./contact.php" class="header-menu">Contact</a></li>
+                <li class="h1-5"><a href="./top.html" class="header-menu">Top</a></li>
+                <li class="h1-6">
+                    <details>
+                        <summary>Tool</summary>
+                        <a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a>
+                        <a href="./weeklyboss.html" class="header-a">週ボス計算機</a>
+                    </details>
+                </li>
+                <li class="h1-7"><a href="./article.html" class="header-menu">Staff</a></li>
+                <li class="h1-8"><a href="./contact.php" class="header-menu">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <div id="first-content" class="boxCenter textLeft narrow-p border-line fadeUp duration">
-                <h1>About us</h1>
-                <p>メイプルストーリーの楓鯖にて活動しているギルド「雪いちご」が運営するサイトです。</p>
-                <p>ゲームをプレイしていてこれがあったら便利だなーを実現しようとする技術系ギルドです。</p>
-                <p>あったら便利と思われるツールを開発して公開しています。</p>
-                <p>ツールの開発案や開発プロジェクトの参加も募集中です。</p>
-                <p>初心者でもとても親切な<a href="https://twitter.com/maiple9" class="contact-developer"
-                        target="_blank">まっこり</a>が指導してくれます。</p>
-                <p>ギルド員の募集もしています。</p>
-            </div>
-        </section>
-        <section>
-            <div class="border-line fadeUp duration">
-                <h1>History</h1>
-                <div class="patch boxCenter">
-                    <img src="./images/patch.jpg" alt="patch">
-                    <p>
-                        2022/07/18 細かいバグの修正<br>
-                        2022/07/17 アニメーションを導入<br>
-                        2022/07/15 レイアウトの調整<br>
-                        2022/06/24 スマホサイズ対応<br>
-                        2022/06/06 contact実装<br>
-                        2022/06/03 公開<br>
-                        2022/05/30 top実装<br>
-                        2022/05/23 開発にまっこり追加<br>
-                        2022/05/15 りんごちゃんの計算機実装<br>
-                        2022/05/07 ちうとんが作成開始</p>
+        <div class="border-line">
+            <section>
+                <div id="first-content" class="boxCenter fadeUp duration">
+                    <h1 class="h1-1">About us</h1>
+                    <div class=" textLeft narrow-p ">
+                        <p>メイプルストーリーの楓鯖にて活動しているギルド「雪いちご」が運営するサイトです。</p>
+                        <p>ゲームをプレイしていてこれがあったら便利だなーを実現しようとする技術系ギルドです。</p>
+                        <p>あったら便利と思われるツールを開発して公開しています。</p>
+                        <p>ツールの開発案や開発プロジェクトの参加も募集中です。</p>
+                        <p>初心者でもとても親切な<a href="https://twitter.com/maiple9" class="contact-developer"
+                                target="_blank">まっこり</a>が指導してくれます。</p>
+                        <p>ギルド員の募集もしています。</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="border-line fadeUp duration">
-                <h1>Contact</h1>
-                <div>
+            </section>
+            <section>
+                <div class="fadeUp duration">
+                    <h1 class="h1-2">History</h1>
+                    <div class="patch boxCenter">
+                        <img src="./images/patch.jpg" alt="patch">
+                        <p>
+                            2022/08/05 ギルド員の紹介ページを作成<br>
+                            2022/07/18 細かいバグの修正<br>
+                            2022/07/17 アニメーションを導入<br>
+                            2022/07/15 レイアウトの調整<br>
+                            2022/06/24 スマホサイズ対応<br>
+                            2022/06/06 contact実装<br>
+                            2022/06/03 公開<br>
+                            2022/05/30 top実装<br>
+                            2022/05/23 開発にまっこり追加<br>
+                            2022/05/15 りんごちゃんの計算機実装<br>
+                            2022/05/07 ちうとんが作成開始</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="fadeUp duration">
+                    <h1 class="h1-3">Contact</h1>
+                    <div>
 
-                    <div class="boxCenter textLeft narrow-p flex">
-                        <p><img src="./images/character/ishinoseirei.gif" alt="seirei"></p>
-                        <p class="boxCenter">
-                            ツールについての連絡先：<br>
-                            <a href="https://twitter.com/tiutonNL" class="contact-developer" target="_blank">ちうとん</a>
-                            または
-                            <a href="https://twitter.com/maiple9" class="contact-developer" target="_blank">まっこり</a>
-                            まで</p>
-                    </div>
-                    <div class="boxCenter textLeft narrow-p flex">
-                        <p><img src="./images/character/bird.gif" alt="bird"></p>
-                        <p>その他はゲーム内でギルド員にご相談ください</p>
+                        <div class="boxCenter textLeft narrow-p flex">
+                            <p><img src="./images/character/ishinoseirei.gif" alt="seirei"></p>
+                            <p class="boxCenter">
+                                ツールについての連絡先：<br>
+                                <a href="https://twitter.com/tiutonNL" class="contact-developer"
+                                    target="_blank">ちうとん</a>
+                                または
+                                <a href="https://twitter.com/maiple9" class="contact-developer" target="_blank">まっこり</a>
+                                まで</p>
+                        </div>
+                        <div class="boxCenter textLeft narrow-p flex">
+                            <p><img src="./images/character/bird.gif" alt="bird"></p>
+                            <p>その他はゲーム内でギルド員にご相談ください</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <div>
             <img src="./images/character/ruminasu.gif" alt="luminous">
             <img src="./images/character/rania.gif" alt="rania">

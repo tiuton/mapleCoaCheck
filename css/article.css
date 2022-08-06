@@ -1,102 +1,27 @@
 @charset "UTF-8";
+@import url(./style.css);
 
-.article-box a {
-    display: inline-block;
-    margin-bottom: 5vw;
+.player-menu1 {
+    color: #3A3A3A;
+    background-color: #ff7e94;
+    border-radius: 5px;
 }
 
-.article-box .sp {
-    display: none;
-    margin: 0.5vw 0.5vw;
+.player-menu2 {
+    color: #3A3A3A;
+    background-color: #63D1FF;
+    border-radius: 5px;
 }
 
-.article-box {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-
-.inner-box {
-    width: calc(100vw/3.5);
-    height: calc(100vw/3.5);
-    position: relative;
-    background-color: transparent;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.inner-box:hover img {
-    transform: translate(-50%, 0) scale(1.2);
-}
-
-.inner-box img {
-    width: calc(100vw/3.5);
-    height: calc(100vw/3.5);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border-radius: 10px;
-    z-index: 10;
-    transition: all 0.75s ease;
-}
-
-.inner-box::after {
-    width: calc(100vw/3.5);
-    height: calc(100vw/3.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    z-index: 11;
-    background-color: rgba(0, 0, 0, 0.6);
-    content: "";
-}
-
-.inner-box h2 {
-    font-size: 2rem;
-    font-family: bokutachi, sans-serif;
-    width: 20vw;
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 12;
+.player-menu3 {
+    color: #3A3A3A;
+    background-color: #FFFA96;
+    border-radius: 5px;
 }
 
 @media screen and (max-width:600px) {
-    .article-box a {
-        display: inline-block;
-        margin: 0.5vw 0.5vw;
-    }
 
-    .article-box .sp {
-        display: inline-block;
-        margin: 0.5vw 0.5vw;
-    }
-
-    .inner-box {
-        width: 45vw;
-        height: 45vw;
-    }
-
-    .inner-box img {
-        width: 45vw;
-        height: 45vw;
-    }
-
-    .inner-box::after {
-        width: 45vw;
-        height: 45vw;
-    }
-
-    .inner-box h2 {
-        font-size: 1rem;
-        font-family: bokutachi, sans-serif;
-        width: 45vw;
+    .flex {
+        flex-direction: column;
     }
 }
