@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url(./style.css);
+
+div.width50 {
+    flex-direction: column;
+}
+
+h1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    width: 80%;
+    margin: 10px auto;
+}
+
+dl {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+}
+
+dl:nth-child(1) {
+    background-color: #8DABFC;
+    /* background-color: #F7B0C8; */
+    color: white;
+}
+
+dl:nth-child(even) {
+    background-color: #F7F4C8
+}
+
+dt,
+dd {
+    width: 25vw;
+    text-align: right;
+}
+
+dt:first-child {
+    width: 35vw;
+}
+
+dd:last-child {
+    width: 20vw;
+}
+
+div.border-line>div.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+div div.flex {
+    display: none;
+}
+
+.h1-1 {
+    background-color: #f69679;
+    color: #86613D;
+    margin-top: 0;
+    /* background-color: #8DABFC; */
+}
+
+.h1-2 {
+    background-color: #f9a980;
+    color: #86613D;
+    /* background-color: #7EB3E0; */
+}
+
+.h1-3 {
+    background-color: #fecf8d;
+    color: #86613D;
+    /* background-color: #97E3F7; */
+}
+
+.h1-4 {
+    background-color: #fabea7;
+    color: #86613D;
+    /* background-color: #7EE0DA; */
+}
+
+.h1-5 {
+    background-color: #fcc9ac;
+    color: #86613D;
+    /* background-color: #8DFCD5; */
+}
+
+input {
+    text-align: right;
+    width: 5vw;
+    font-family: 'bokutachi';
+}
+
+.no-border {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+    width: 20vw;
+}
+
+dd.total {
+    width: 40vw;
+}
+
+.text-mat {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+    width: 60%;
+    margin: 80px auto 0 10px;
+    padding: 20px 0;
+}
+
+.right-mat {
+    position: fixed;
+    right: 10px;
+    top: 160px;
+    background-color: white;
+    border-radius: 10px;
+    height: 30%;
+    width: 30%;
+    padding-bottom: 20px;
+    vertical-align: top;
+    padding: 20px 0;
+}
+
+.right-mat dt,
+.right-mat dd {
+    text-align: right;
+}
+
+.right-mat dt:first-child {
+    width: 40%;
+}
+
+.right-mat dd:last-child {
+    width: 60%;
+}
+
+@media screen and (max-width:1199px) {
+
+    .flex {
+        display: block;
+    }
+
+    .text-mat {
+        height: 100%;
+        width: 95%;
+        margin: 40px auto;
+    }
+
+    .right-mat {
+        position: inherit;
+        height: 100%;
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .no-border {
+        width: 25vw;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .right-mat h2 {
+        margin: 0 auto 10px;
+    }
+}

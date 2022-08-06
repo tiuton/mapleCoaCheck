@@ -61,7 +61,7 @@ $_SESSION["message"] = $message;
                     <p class="header-menu">Tool</p>
                     <ul>
                         <li><a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a></li>
-                        <li><a href="./weeklyboss.html" class="header-a">週ボス計算機</a></li>
+                        <li><a href="./weeklyboss.html" class="header-a">ぅ初ぃのおこづかい</a></li>
                     </ul>
                 </li>
                 <li><a href="./article.html" class="header-menu">Staff</a></li>
@@ -83,7 +83,7 @@ $_SESSION["message"] = $message;
                     <details>
                         <summary>Tool</summary>
                         <a href="./ringocal.html" class="header-a">りんごちゃんの計算機</a>
-                        <a href="./weeklyboss.html" class="header-a">週ボス計算機</a>
+                        <a href="./weeklyboss.html" class="header-a">ぅ初ぃのおこづかい</a>
                     </details>
                 </li>
                 <li class="h1-7"><a href="./article.html" class="header-menu">Staff</a></li>
