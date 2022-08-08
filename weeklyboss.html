@@ -73,133 +73,156 @@
                     <!-- データ入れ -->
                     <div>
                         <div>
-                            <div class="menu-item-btn">
+                            <div class="">
+                                <div class="relative">
+                                    <h2 class=" h1-0">マイリスト</h2>
+                                    <div class="toggle-button-cover">
+                                        <div class="button-cover">
+                                            <div class="button r" id="button-3">
+                                                <input type="checkbox" class="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="mylist" class="flex">
+                                <dl>
+                                    <dt>名前</dt>
+                                    <dd>おこづかい</dd>
+                                    <dd>討伐数</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="menu-item-btn mylist-off">
                                 <h2 class="h1-2">デイリーボス click!</h2>
                             </div>
                             <div class="flex">
                                 <dl>
                                     <dt>名前</dt>
-                                    <dd>金額</dd>
+                                    <dd>おこづかい</dd>
                                     <dd>討伐数</dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nジャクム</dt>
+                                    <dt class="daily">Nジャクム</dt>
                                     <dd><input type="text" class="no-border" name="njakumu0" value="612,500" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="njakumu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nマグナス</dt>
+                                    <dt class="daily">Nマグナス</dt>
                                     <dd><input type="text" class="no-border" name="nmagunasu0" value="2,592,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nmagunasu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nヒルラ</dt>
+                                    <dt class="daily">Nヒルラ</dt>
                                     <dd><input type="text" class="no-border" name="nhirura0" value="800,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nhirura1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nランマル</dt>
+                                    <dt class="daily">Nランマル</dt>
                                     <dd><input type="text" class="no-border" name="nranmaru0" value="840,500" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nranmaru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hランマル</dt>
+                                    <dt class="daily">Hランマル</dt>
                                     <dd><input type="text" class="no-border" name="hranmaru0" value="2,664,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hranmaru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nビシャスプラント</dt>
+                                    <dt class="daily">Nビシャスプラント</dt>
                                     <dd><input type="text" class="no-border" name="nbisyasu0" value="2,664,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nbisyasu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nピエール</dt>
-                                    <dd><input type="text" class="no-border" name="npie-ru0" value="968,000" size="20"
+                                    <dt class="daily">Nピエール</dt>
+                                    <dd><input type="text" class="no-border" name="npieru0" value="968,000" size="20"
                                             readonly></dd>
-                                    <dd><input type="number" name="npie-ru1" value="0" size="20" min="0" max="10"></dd>
+                                    <dd><input type="number" name="npieru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nバンバン</dt>
+                                    <dt class="daily">Nバンバン</dt>
                                     <dd><input type="text" class="no-border" name="nbanban0" value="968,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nbanban1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nブラッディクイーン</dt>
-                                    <dd><input type="text" class="no-border" name="nkui-n0" value="968,000" size="20"
+                                    <dt class="daily">Nブラッディクイーン</dt>
+                                    <dd><input type="text" class="no-border" name="nkuin0" value="968,000" size="20"
                                             readonly></dd>
-                                    <dd><input type="number" name="nkui-n1" value="0" size="20" min="0" max="10"></dd>
+                                    <dd><input type="number" name="nkuin1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nベルルム</dt>
+                                    <dt class="daily">Nベルルム</dt>
                                     <dd><input type="text" class="no-border" name="nberurumu0" value="968,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nberurumu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nヴァンレオン</dt>
+                                    <dt class="daily">Nヴァンレオン</dt>
                                     <dd><input type="text" class="no-border" name="nbanreon0" value="1,458,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nbanreon1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hヴァンレオン</dt>
+                                    <dt class="daily">Hヴァンレオン</dt>
                                     <dd><input type="text" class="no-border" name="hbanreon0" value="2,450,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hbanreon1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nホーンテイル</dt>
-                                    <dd><input type="text" class="no-border" name="nho-nteiru0" value="1,012,500"
+                                    <dt class="daily">Nホーンテイル</dt>
+                                    <dd><input type="text" class="no-border" name="nhonteiru0" value="1,012,500"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="nho-nteiru1" value="0" size="20" min="0" max="10">
+                                    <dd><input type="number" name="nhonteiru1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cホーンテイル</dt>
-                                    <dd><input type="text" class="no-border" name="cho-nteiru0" value="1,352,000"
+                                    <dt class="daily">Cホーンテイル</dt>
+                                    <dd><input type="text" class="no-border" name="chonteiru0" value="1,352,000"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="cho-nteiru1" value="0" size="20" min="0" max="10">
+                                    <dd><input type="number" name="chonteiru1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Eアカイラム</dt>
+                                    <dt class="daily">Eアカイラム</dt>
                                     <dd><input type="text" class="no-border" name="eakairamu0" value="1,152,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="eakairamu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nアカイラム</dt>
+                                    <dt class="daily">Nアカイラム</dt>
                                     <dd><input type="text" class="no-border" name="nakairamu0" value="2,520,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nakairamu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nジュリエッタ</dt>
+                                    <dt class="daily">Nジュリエッタ</dt>
                                     <dd><input type="text" class="no-border" name="njurietta0" value="1,200,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="njurietta1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nピンクビーン</dt>
-                                    <dd><input type="text" class="no-border" name="npinkubi-n0" value="1,404,500"
+                                    <dt class="daily">Nピンクビーン</dt>
+                                    <dd><input type="text" class="no-border" name="npinkubin0" value="1,404,500"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="npinkubi-n1" value="0" size="20" min="0" max="10">
+                                    <dd><input type="number" name="npinkubin1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Eクロス</dt>
+                                    <dt class="daily">Eクロス</dt>
                                     <dd><input type="text" class="no-border" name="ekurosu0" value="800,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="ekurosu1" value="0" size="20" min="0" max="10"></dd>
@@ -207,234 +230,234 @@
                             </div>
                         </div>
                         <div>
-                            <div class="menu-item-btn">
+                            <div class="menu-item-btn mylist-off">
                                 <h2 class="h1-3">ウィークリーボス click!</h2>
                             </div>
                             <div class="flex">
                                 <dl>
                                     <dt>名前</dt>
-                                    <dd>金額</dd>
+                                    <dd>おこづかい</dd>
                                     <dd>討伐数</dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cジャクム</dt>
+                                    <dt class="weekly">Cジャクム</dt>
                                     <dd><input type="text" class="no-border" name="cjakumu0" value="16,200,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="cjakumu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hマグナス</dt>
+                                    <dt class="weekly">Hマグナス</dt>
                                     <dd><input type="text" class="no-border" name="hmagunasu0" value="19,012,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hmagunasu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hヒルラ</dt>
+                                    <dt class="weekly">Hヒルラ</dt>
                                     <dd><input type="text" class="no-border" name="hhirura0" value="11,250,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hhirura1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cビシャスプラント</dt>
+                                    <dt class="weekly">Cビシャスプラント</dt>
                                     <dd><input type="text" class="no-border" name="cbisyasu0" value="26,450,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="cbisyasu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cピエール</dt>
-                                    <dd><input type="text" class="no-border" name="cpie-ru0" value="16,200,000"
-                                            size="20" readonly></dd>
-                                    <dd><input type="number" name="cpie-ru1" value="0" size="20" min="0" max="10"></dd>
+                                    <dt class="weekly">Cピエール</dt>
+                                    <dd><input type="text" class="no-border" name="cpieru0" value="16,200,000" size="20"
+                                            readonly></dd>
+                                    <dd><input type="number" name="cpieru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cバンバン</dt>
+                                    <dt class="weekly">Cバンバン</dt>
                                     <dd><input type="text" class="no-border" name="cbanban0" value="16,200,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="cbanban1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cブラッディクイーン</dt>
-                                    <dd><input type="text" class="no-border" name="ckui-n0" value="16,200,000" size="20"
+                                    <dt class="weekly">Cブラッディクイーン</dt>
+                                    <dd><input type="text" class="no-border" name="ckuin0" value="16,200,000" size="20"
                                             readonly></dd>
-                                    <dd><input type="number" name="ckui-n1" value="0" size="20" min="0" max="10"></dd>
+                                    <dd><input type="number" name="ckuin1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cベルルム</dt>
+                                    <dt class="weekly">Cベルルム</dt>
                                     <dd><input type="text" class="no-border" name="cberurumu0" value="21,012,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="cberurumu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nノウ姫</dt>
+                                    <dt class="weekly">Nノウ姫</dt>
                                     <dd><input type="text" class="no-border" name="nouhime0" value="16,200,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nouhime1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cピンクビーン</dt>
-                                    <dd><input type="text" class="no-border" name="cpinkubi-n0" value="12,800,000"
+                                    <dt class="weekly">Cピンクビーン</dt>
+                                    <dd><input type="text" class="no-border" name="cpinkubin0" value="12,800,000"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="cpinkubi-n1" value="0" size="20" min="0" max="10">
+                                    <dd><input type="number" name="cpinkubin1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nクロス</dt>
+                                    <dt class="weekly">Nクロス</dt>
                                     <dd><input type="text" class="no-border" name="nkurosu0" value="1,342,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nkurosu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Eシグナス</dt>
+                                    <dt class="weekly">Eシグナス</dt>
                                     <dd><input type="text" class="no-border" name="esigunasu0" value="9,112,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="esigunasu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nシグナス</dt>
+                                    <dt class="weekly">Nシグナス</dt>
                                     <dd><input type="text" class="no-border" name="nsigunasu0" value="14,450,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nsigunasu1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nスウ</dt>
+                                    <dt class="weekly">Nスウ</dt>
                                     <dd><input type="text" class="no-border" name="nsuu0" value="32,512,500" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nsuu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hスウ</dt>
+                                    <dt class="weekly">Hスウ</dt>
                                     <dd><input type="text" class="no-border" name="hsuu0" value="74,112,500" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="hsuu1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nデミアン</dt>
+                                    <dt class="weekly">Nデミアン</dt>
                                     <dd><input type="text" class="no-border" name="ndemian0" value="33,800,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="ndemian1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hデミアン</dt>
+                                    <dt class="weekly">Hデミアン</dt>
                                     <dd><input type="text" class="no-border" name="hdemian0" value="70,312,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hdemian1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nガーディアンエンジェルスライム</dt>
-                                    <dd><input type="text" class="no-border" name="nga-dexiansuraimu0"
-                                            value="34,322,000" size="20" readonly></dd>
-                                    <dd><input type="number" name="nga-dexiansuraimu1" value="0" size="20" min="0"
+                                    <dt class="weekly">Nガーディアンエンジェルスライム</dt>
+                                    <dd><input type="text" class="no-border" name="ngadexiansuraimu0" value="34,322,000"
+                                            size="20" readonly></dd>
+                                    <dd><input type="number" name="ngadexiansuraimu1" value="0" size="20" min="0"
                                             max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cガーディアンエンジェルスライム</dt>
-                                    <dd><input type="text" class="no-border" name="cga-dexiansuraimu0"
-                                            value="90,312,500" size="20" readonly></dd>
-                                    <dd><input type="number" name="cga-dexiansuraimu1" value="0" size="20" min="0"
+                                    <dt class="weekly">Cガーディアンエンジェルスライム</dt>
+                                    <dd><input type="text" class="no-border" name="cgadexiansuraimu0" value="90,312,500"
+                                            size="20" readonly></dd>
+                                    <dd><input type="number" name="cgadexiansuraimu1" value="0" size="20" min="0"
                                             max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nアケチミツヒデ</dt>
+                                    <dt class="weekly">Nアケチミツヒデ</dt>
                                     <dd><input type="text" class="no-border" name="naketi0" value="28,800,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="naketi1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Eルシード</dt>
-                                    <dd><input type="text" class="no-border" name="erusi-do0" value="35,112,500"
+                                    <dt class="weekly">Eルシード</dt>
+                                    <dd><input type="text" class="no-border" name="erusido0" value="35,112,500"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="rusi-do1" value="0" size="20" min="0" max="10"></dd>
+                                    <dd><input type="number" name="rusido1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nルシード</dt>
-                                    <dd><input type="text" class="no-border" name="nrusi-do0" value="40,612,500"
+                                    <dt class="weekly">Nルシード</dt>
+                                    <dd><input type="text" class="no-border" name="nrusido0" value="40,612,500"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="nrusi-do1" value="0" size="20" min="0" max="10"></dd>
+                                    <dd><input type="number" name="nrusido1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hルシード</dt>
-                                    <dd><input type="text" class="no-border" name="hrusi-do0" value="80,000,000"
+                                    <dt class="weekly">Hルシード</dt>
+                                    <dd><input type="text" class="no-border" name="hrusido0" value="80,000,000"
                                             size="20" readonly></dd>
-                                    <dd><input type="number" name="hrusi-do1" value="0" size="20" min="0" max="10"></dd>
+                                    <dd><input type="number" name="hrusido1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Eウィル</dt>
+                                    <dt class="weekly">Eウィル</dt>
                                     <dd><input type="text" class="no-border" name="ewiru0" value="38,255,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="ewiru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nウィル</dt>
+                                    <dt class="weekly">Nウィル</dt>
                                     <dd><input type="text" class="no-border" name="nwiru0" value="46,512,500" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="nwiru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hウィル</dt>
+                                    <dt class="weekly">Hウィル</dt>
                                     <dd><input type="text" class="no-border" name="hwiru0" value="88,200,000" size="20"
                                             readonly></dd>
                                     <dd><input type="number" name="hwiru1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nダスク</dt>
+                                    <dt class="weekly">Nダスク</dt>
                                     <dd><input type="text" class="no-border" name="ndasuku0" value="49,612,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="ndasuku1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>Cダスク</dt>
+                                    <dt class="weekly">Cダスク</dt>
                                     <dd><input type="text" class="no-border" name="cdasuku0" value="92,450,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="cdasuku1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>N真ヒルラ</dt>
+                                    <dt class="weekly">N真ヒルラ</dt>
                                     <dd><input type="text" class="no-border" name="nsinhirura0" value="89,520,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nsinhirura1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>H真ヒルラ</dt>
+                                    <dt class="weekly">H真ヒルラ</dt>
                                     <dd><input type="text" class="no-border" name="hsinhirura0" value="110,450,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hsinhirura1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Nデュンケル</dt>
+                                    <dt class="weekly">Nデュンケル</dt>
                                     <dd><input type="text" class="no-border" name="ndexyunkeru0" value="52,812,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="ndexyunkeru1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>Hデュンケル</dt>
+                                    <dt class="weekly">Hデュンケル</dt>
                                     <dd><input type="text" class="no-border" name="hdexyunkeru0" value="96,800,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hdexyunkeru1" value="0" size="20" min="0" max="10">
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>N選ばれしものセレン</dt>
+                                    <dt class="weekly">N選ばれしものセレン</dt>
                                     <dd><input type="text" class="no-border" name="nseren0" value="133,687,500"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="nseren1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>H選ばれしものセレン</dt>
+                                    <dt class="weekly">H選ばれしものセレン</dt>
                                     <dd><input type="text" class="no-border" name="hseren0" value="151,250,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hseren1" value="0" size="20" min="0" max="10"></dd>
                                 </dl>
                                 <dl>
-                                    <dt>C監視者カロス</dt>
+                                    <dt class="weekly">C監視者カロス</dt>
                                     <dd><input type="text" class="no-border" name="ckarosu0" value="200,000,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="ckarosu1" value="0" size="20" min="0" max="10"></dd>
@@ -442,17 +465,17 @@
                             </div>
                         </div>
                         <div>
-                            <div class="menu-item-btn">
+                            <div class="menu-item-btn mylist-off">
                                 <h2 class="h1-4">マンスリーボス click!</h2>
                             </div>
                             <div class="flex">
                                 <dl>
                                     <dt>名前</dt>
-                                    <dd>金額</dd>
+                                    <dd>おこづかい</dd>
                                     <dd>討伐数</dd>
                                 </dl>
                                 <dl>
-                                    <dt>H暗黒の魔法使い</dt>
+                                    <dt class="monthly">H暗黒の魔法使い</dt>
                                     <dd><input type="text" class="no-border" name="hankoku0" value="500,000,000"
                                             size="20" readonly></dd>
                                     <dd><input type="number" name="hankoku1" value="0" size="20" min="0" max="10"></dd>
@@ -467,7 +490,7 @@
                 <div>
                     <dl>
                         <dt>名前</dt>
-                        <dd>金額</dd>
+                        <dd>おこづかい</dd>
                     </dl>
                     <dl>
                         <dt>デイリーボス</dt>
@@ -485,6 +508,12 @@
                         <dt>合計</dt>
                         <dd id="totalS" class="total">0</dd>
                     </dl>
+                    <dl>
+                        <dt>累計</dt>
+                        <dd id="totalR" class="total">0</dd>
+                    </dl>
+                    <button id="save">結果を保存</button>
+                    <p><small>保存はcookieを利用しています。</small></p>
                 </div>
             </div>
         </div>

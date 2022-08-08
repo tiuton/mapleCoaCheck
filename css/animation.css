@@ -42,6 +42,20 @@
     }
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        /* 透明 */
+        transform: translateY(-10px);
+        /* 上から表示 */
+    }
+
+    100% {
+        opacity: 0;
+        transform: none;
+    }
+}
+
 @keyframes fadeOutAnime {
     0% {
         opacity: 0;
