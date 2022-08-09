@@ -11,6 +11,7 @@ $(function () {
 
     let readData = [];
     let totalR = 0;
+    let mylistLength = [];
 
     //びよーん
     $('.menu-item-btn').click(function () {
@@ -39,7 +40,6 @@ $(function () {
             // 討伐数の取得
             let removeComma = param.map(num => num.value.replaceAll(',', ''));
             let hunt = removeComma.filter((num, index) => index % 2 !== 0);
-            console.log(hunt);
             // 分類の取得
             let daily = $(".daily").length;
             let weekly = $(".weekly").length;
@@ -95,6 +95,9 @@ $(function () {
             if (isNaN(total)) {
                 total = 0;
             }
+            //md,mw,mmの数からmylistの上書き保存にいる処理
+
+            mylistLength = md + mm + mw;
             //保存処理
             document.cookie = (`00data=${today};` + "expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
             document.cookie = (`01data=${total};` + "expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
@@ -102,6 +105,11 @@ $(function () {
             for (let i = 0; i < param.length; i++) {
 
                 if (Number(hunt[i]) > 0) {
+                    param[i * 2].name = param[i * 2].name.replaceAll("0", "");
+                    param[i * 2].value = param[i * 2].value.replaceAll(',', '');
+                    setData = (`${param[i * 2].name}=` + encodeURIComponent(`${name[i]}-${param[i * 2].name}-${param[i * 2].value}-${hunt[i]}-${type[i]}`) + ";expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
+                    document.cookie = setData;
+                } else if (i < mylistLength) {
                     param[i * 2].name = param[i * 2].name.replaceAll("0", "");
                     param[i * 2].value = param[i * 2].value.replaceAll(',', '');
                     setData = (`${param[i * 2].name}=` + encodeURIComponent(`${name[i]}-${param[i * 2].name}-${param[i * 2].value}-${hunt[i]}-${type[i]}`) + ";expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
@@ -135,6 +143,7 @@ $(function () {
     });
     //トグルボタンの動作
     $('input[type=checkbox]').click(function () {
+        $("input[type=checkbox]").prop("disabled", true);
         if (($(this).prop('checked'))) {
             // マイリストONの時
             $(function () {
@@ -145,6 +154,7 @@ $(function () {
                     $(".menu-item-btn").each(function () {
                         $(this).siblings('div div.flex').stop().slideUp();
                     });
+                    $("input[type=checkbox]").prop("disabled", false);
                 }, 800);
             });
             // アニメーション
@@ -218,8 +228,7 @@ $(function () {
              </dl>
               `);
             readData.forEach((value) => {
-                if (Number(value.hunt) !== 0) {
-                    $mylist.append(`
+                $mylist.append(`
                  <dl>
                  <dt class="m${value.type}">${value.name}</dt>
                  <dd><input type="text" class="no-border" name="${value.romaji}0" value="${value.value}" size="20"
@@ -227,7 +236,6 @@ $(function () {
                  <dd><input type="number" name="${value.romaji}1" value="${value.hunt}" size="20" min="0" max="10"></dd>
                  </dl>
                  `);
-                }
             });
         } else {
             // マイリストOFFの時
@@ -236,7 +244,7 @@ $(function () {
                     $("#mylist").css({
                         "display": "none",
                     });
-
+                    $("input[type=checkbox]").prop("disabled", false);
                 }, 800);
             });
 
@@ -293,6 +301,8 @@ $(function () {
             $('#totalM').text(mSum.toLocaleString());
             $('#totalS').text(sSum.toLocaleString());
             $('#total').css({ "display": "flex" });
+            $('#setumei').css({ "display": "block" });
+            $('#save').text("Save");
             $('#totalR').text(total.toLocaleString());
         } else {
             // マイリスト非表示の計算
@@ -321,6 +331,8 @@ $(function () {
             $('#totalM').text(mSum.toLocaleString());
             $('#totalS').text(sSum.toLocaleString());
             $('#total').css({ "display": "none" });
+            $('#setumei').css({ "display": "none" });
+            $('#save').text("マイリストに登録");
         };
     };
 });
