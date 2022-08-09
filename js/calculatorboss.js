@@ -10,6 +10,7 @@ $(function () {
     };
 
     let readData = [];
+    let totalR = 0;
 
     //びよーん
     $('.menu-item-btn').click(function () {
@@ -34,48 +35,92 @@ $(function () {
             name = name.filter(element => {
                 return !nglist.includes(element);
             });
+            console.log(name);
             // 討伐数の取得
             let removeComma = param.map(num => num.value.replaceAll(',', ''));
             let hunt = removeComma.filter((num, index) => index % 2 !== 0);
+            console.log(hunt);
             // 分類の取得
             let daily = $(".daily").length;
             let weekly = $(".weekly").length;
             let monthly = $(".monthly").length;
+            let md = $(".md").length;
+            let mm = $(".mm").length;
+            let mw = $(".mw").length;
             let type = []
-            type = "d,".repeat(daily).split(",");
-            type.pop();
-            let array1 = "w,".repeat(weekly).split(",");
-            array1.pop();
-            type = type.concat(array1);
-            let array2 = "m,".repeat(monthly).split(",");
-            array2.pop();
-            type = type.concat(array2);
+
+            if (md > 0) {
+                type = "d,".repeat(md).split(",");
+                type.pop();
+                let array1 = "w,".repeat(mw).split(",");
+                array1.pop();
+                type = type.concat(array1);
+                let array2 = "m,".repeat(mm).split(",");
+                array2.pop();
+                type = type.concat(array2);
+            } else if (mm > 0) {
+                type = "d,".repeat(md).split(",");
+                type.pop();
+                let array1 = "w,".repeat(mw).split(",");
+                array1.pop();
+                type = type.concat(array1);
+                let array2 = "m,".repeat(mm).split(",");
+                array2.pop();
+                type = type.concat(array2);
+            } else if (mw > 0) {
+                type = "d,".repeat(md).split(",");
+                type.pop();
+                let array1 = "w,".repeat(mw).split(",");
+                array1.pop();
+                type = type.concat(array1);
+                let array2 = "m,".repeat(mm).split(",");
+                array2.pop();
+                type = type.concat(array2);
+            } else {
+                type = "d,".repeat(daily).split(",");
+                type.pop();
+                let array1 = "w,".repeat(weekly).split(",");
+                array1.pop();
+                type = type.concat(array1);
+                let array2 = "m,".repeat(monthly).split(",");
+                array2.pop();
+                type = type.concat(array2);
+            }
+
             // 今日の日付を取得
             let now = [new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate()];
             let today = now.join("_");
+            // 累計を取得
+            let total = Number($("#totalS").text().replaceAll(",", "")) + Number(totalR);
+            if (isNaN(total)) {
+                total = 0;
+            }
             //保存処理
-            let num = 0;
-            document.cookie = `data0=${today};` + ";expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com";
-            for (index in param) {
-                param[index].value = param[index].value.replaceAll(',', '');
-                if (Number(param[index].value) >= 100) { //最低結晶石の値段以下に設定すること
-                    // param[index].value = param[index].value.replaceAll(',', '');
-                    param[index].name = param[index].name.replaceAll("0", "");
-                    // 日本語名-ローマ字-価格-討伐数-タイプ
-                    setData = `data${num + 1}=` + encodeURIComponent(`${name[num]}-${param[index].name}-${param[index].value}-${hunt[num]}-${type[num]}`) + ";expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com";
+            document.cookie = (`00data=${today};` + "expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
+            document.cookie = (`01data=${total};` + "expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
+
+            for (let i = 0; i < param.length; i++) {
+
+                if (Number(hunt[i]) > 0) {
+                    param[i * 2].name = param[i * 2].name.replaceAll("0", "");
+                    param[i * 2].value = param[i * 2].value.replaceAll(',', '');
+                    setData = (`${param[i * 2].name}=` + encodeURIComponent(`${name[i]}-${param[i * 2].name}-${param[i * 2].value}-${hunt[i]}-${type[i]}`) + ";expires=Tue, 31-Dec-2037 00:00:00 GMT;domain=yukiichigo.com").replace(" ", "");
                     document.cookie = setData;
-                    num++;
                 }
-            };
+            }
+
             const cookies = document.cookie;
-            console.log(cookies);
             alert("保存しました。");
+            $(function () {
+                setTimeout(function () {
+                    ruikei();
+                }, 500);
+            });
         }
     });
 
     // 計算する
     $(document).on("change", "input", function () {
-        // $('input').change(function () {
         if (this.value > 10 || this.value < 0) {
             alert('10以下の数字を入力してください');
             this.value = 0;
@@ -83,73 +128,9 @@ $(function () {
 
         $(function () {
             setTimeout(function () {
-                if ($("#mylist").css("display") == "block") {
-                    // マイリスト表示時の計算
-                    let mylistInputs = [];
-
-                    for (let i = 0; i < $('#mylist').find('input').length; i++) {
-                        mylistInputs.push($('#mylist').find('input')[i].value);
-                    }
-                    let removeComma = mylistInputs.map(num => num.replaceAll(',', ''));
-
-                    let price = removeComma.filter((num, index) => index % 2 === 0);
-                    let hunt = removeComma.filter((num, index) => index % 2 !== 0);
-                    let md = $(".md").length;
-                    let mm = $(".mm").length;
-                    let mw = $(".mw").length;
-
-                    let dSum = 0;
-                    let wSum = 0;
-                    let mSum = 0;
-                    console.log(dCount);
-                    console.log(wCount);
-                    console.log(mCount);
-                    for (let i = 0; i < md; i++) {
-                        dSum = Number(dSum) + (Number(price[i]) * Number(hunt[i]));
-                    };
-                    for (let i = md; i < (md + mw); i++) {
-                        wSum = Number(wSum) + (Number(price[i]) * Number(hunt[i]));
-                    };
-                    for (let i = (md + mw); i < (md + mw + mm); i++) {
-                        mSum = Number(mSum) + (Number(price[i]) * Number(hunt[i]));
-                    };
-                    sSum = dSum + wSum + mSum;
-                    $('#totalD').text(dSum.toLocaleString());
-                    $('#totalW').text(wSum.toLocaleString());
-                    $('#totalM').text(mSum.toLocaleString());
-                    $('#totalS').text(sSum.toLocaleString());
-
-                } else {
-                    // マイリスト非表示の計算
-                    let $form = $('#form1');
-                    let param = $form.serializeArray();
-                    this.value = Number(this.value);
-
-                    let removeComma = param.map(num => num.value.replaceAll(',', ''));
-                    let price = removeComma.filter((num, index) => index % 2 === 0);
-                    let hunt = removeComma.filter((num, index) => index % 2 !== 0);
-
-                    let dSum = 0;
-                    let wSum = 0;
-                    let mSum = 0;
-                    let loop = 19;
-                    for (let i = 0; i < loop; i++) {
-                        dSum = dSum + (Number(price[i]) * Number(hunt[i]));
-                    }
-                    for (let i = loop; i < price.length - 1; i++) {
-                        wSum = wSum + (Number(price[i]) * Number(hunt[i]));
-                    }
-                    mSum = mSum + (Number(price.slice(-1)[0]) * Number(hunt.slice(-1)[0]));
-                    sSum = dSum + wSum + mSum;
-                    $('#totalD').text(dSum.toLocaleString());
-                    $('#totalW').text(wSum.toLocaleString());
-                    $('#totalM').text(mSum.toLocaleString());
-                    $('#totalS').text(sSum.toLocaleString());
-                };
+                ruikei();
             }, 1000);
         });
-
-        // });
     });
     //トグルボタンの動作
     $('input[type=checkbox]').click(function () {
@@ -177,22 +158,47 @@ $(function () {
                 "animation-duration": "1s",
                 "animation-fill-mode": "both",
             });
-
+            // 初期化
+            let input = $("input");
+            for (i in input) {
+                if (i % 2 == 0) {
+                    input[i].value = 0;
+                }
+            }
             // リストの作成
 
             // cookieの読込
-            const cookies = decodeURI(document.cookie);
+            let cookies = decodeURI(document.cookie);
             let cookieData = [];
             let today = Date();
-            cookies.split(";").forEach(function (value, index) {
-                if (index == 0) {
-                    today = value.replaceAll("_", "/");
-                } else {
-                    const content = value.split('=');
+            function sort_num_block(a, b) {
+                const sa = String(a).replace(/(\d+)/g, m => m.padStart(30, '0'));
+                const sb = String(b).replace(/(\d+)/g, m => m.padStart(30, '0'));
+                return sa < sb ? -1 : sa > sb ? 1 : 0;
+            }
+
+            let a = cookies.split(";");
+            let array = [];
+            for (let i = 0; i < a.length; i++) {
+                array[i] = a[i].replaceAll(" ", "");
+            }
+            array.sort(sort_num_block);
+            // 
+            console.log(array);
+            for (let i = 0; i < array.length; i++) {
+
+                if (Number(i) == 0) {
+                    today = Date(array[i].split('=')[1].replaceAll("_", "/"));
+                } else if (Number(i) == 1) {
+                    totalR = array[i].split('=')[1];
+                }
+                else {
+                    const content = array[i].split('=');
                     cookieData.push(content[1]);
                 }
-            });
-
+            };
+            console.log(today);
+            console.log(cookieData);
             // リストの初期化処理
             readData = [];
             for (let i = 0; i < cookieData.length; i++) {
@@ -249,4 +255,72 @@ $(function () {
             $mylist.empty();
         }
     });
+
+    // 累計の計算
+    function ruikei() {
+        if ($("#mylist").css("display") == "block") {
+            // マイリスト表示時の計算
+            let mylistInputs = [];
+
+            for (let i = 0; i < $('#mylist').find('input').length; i++) {
+                mylistInputs.push($('#mylist').find('input')[i].value);
+            }
+            let removeComma = mylistInputs.map(num => num.replaceAll(',', ''));
+
+            let price = removeComma.filter((num, index) => index % 2 === 0);
+            let hunt = removeComma.filter((num, index) => index % 2 !== 0);
+            let md = $(".md").length;
+            let mm = $(".mm").length;
+            let mw = $(".mw").length;
+
+            let dSum = 0;
+            let wSum = 0;
+            let mSum = 0;
+
+            for (let i = 0; i < md; i++) {
+                dSum = Number(dSum) + (Number(price[i]) * Number(hunt[i]));
+            };
+            for (let i = md; i < (md + mw); i++) {
+                wSum = Number(wSum) + (Number(price[i]) * Number(hunt[i]));
+            };
+            for (let i = (md + mw); i < (md + mw + mm); i++) {
+                mSum = Number(mSum) + (Number(price[i]) * Number(hunt[i]));
+            };
+            sSum = dSum + wSum + mSum;
+            let total = sSum + Number(totalR);
+            $('#totalD').text(dSum.toLocaleString());
+            $('#totalW').text(wSum.toLocaleString());
+            $('#totalM').text(mSum.toLocaleString());
+            $('#totalS').text(sSum.toLocaleString());
+            $('#total').css({ "display": "flex" });
+            $('#totalR').text(total.toLocaleString());
+        } else {
+            // マイリスト非表示の計算
+            let $form = $('#form1');
+            let param = $form.serializeArray();
+            this.value = Number(this.value);
+
+            let removeComma = param.map(num => num.value.replaceAll(',', ''));
+            let price = removeComma.filter((num, index) => index % 2 === 0);
+            let hunt = removeComma.filter((num, index) => index % 2 !== 0);
+
+            let dSum = 0;
+            let wSum = 0;
+            let mSum = 0;
+            let loop = 19;
+            for (let i = 0; i < loop; i++) {
+                dSum = dSum + (Number(price[i]) * Number(hunt[i]));
+            }
+            for (let i = loop; i < price.length - 1; i++) {
+                wSum = wSum + (Number(price[i]) * Number(hunt[i]));
+            }
+            mSum = mSum + (Number(price.slice(-1)[0]) * Number(hunt.slice(-1)[0]));
+            sSum = dSum + wSum + mSum;
+            $('#totalD').text(dSum.toLocaleString());
+            $('#totalW').text(wSum.toLocaleString());
+            $('#totalM').text(mSum.toLocaleString());
+            $('#totalS').text(sSum.toLocaleString());
+            $('#total').css({ "display": "none" });
+        };
+    };
 });

@@ -128,7 +128,7 @@ dd.total {
     top: 160px;
     background-color: white;
     border-radius: 10px;
-    height: 50%;
+    height: 65%;
     width: 30%;
     padding-bottom: 20px;
     vertical-align: top;
@@ -154,6 +154,10 @@ dd.total {
 
 .mylist-off {
     display: block;
+}
+
+#total {
+    display: none;
 }
 
 @media screen and (max-width:1199px) {
