@@ -113,6 +113,7 @@ $(function () {
             alert("保存しました。");
             $(function () {
                 setTimeout(function () {
+                    totalR = Number($("#totalR").text().replaceAll(",", ""));
                     ruikei();
                 }, 500);
             });
@@ -182,9 +183,9 @@ $(function () {
             for (let i = 0; i < a.length; i++) {
                 array[i] = a[i].replaceAll(" ", "");
             }
+            //phpid削除処理
             array.sort(sort_num_block);
-            // 
-            console.log(array);
+            array = array.filter((value) => !value.includes("PHPSESSID"));
             for (let i = 0; i < array.length; i++) {
 
                 if (Number(i) == 0) {
@@ -197,8 +198,7 @@ $(function () {
                     cookieData.push(content[1]);
                 }
             };
-            console.log(today);
-            console.log(cookieData);
+
             // リストの初期化処理
             readData = [];
             for (let i = 0; i < cookieData.length; i++) {
