@@ -17,7 +17,8 @@ $(function () {
     $('.menu-item-btn').click(function () {
         $(this).siblings('div div.flex').stop().slideToggle();
     });
-
+    //リストの削除機能
+    //ボスリセット
     // cookie書き込み,保存する際は金額のカンマ外し
     $("#save").click(function () {
         //cookieが使えるか確認
