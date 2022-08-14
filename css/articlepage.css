@@ -117,6 +117,17 @@ a:hover {
     width: 60px;
 }
 
+.textLeft > div:not(:first-child){
+    margin: 20px 0px 0px 0px;
+}
+.textLeft > div.important-text{
+    margin: 50px 0px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-top: 1px solid #1c1f20;
+    border-bottom: 1px solid #1c1f20;
+}
+
 @media screen and (max-width:600px) {
     .text-mat {
         background-color: white;
